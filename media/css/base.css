@@ -34,7 +34,7 @@ a img {
     position: relative;
 }
 
-#header {
+#header, #content .title{
     padding: 0;
     margin: 0;
     margin-left:-0.5em;
@@ -43,7 +43,7 @@ a img {
     text-align:center;
 }
 
-#header a {
+#header a, #content .title{
     text-decoration: none;
     padding: 0;
     margin: 0;
