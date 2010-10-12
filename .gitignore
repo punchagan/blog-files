@@ -1,0 +1,4 @@
+*pyc
+*~
+content/*.html
+!index.html

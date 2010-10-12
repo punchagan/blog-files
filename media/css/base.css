@@ -1,0 +1,121 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Caslon, Garamond, Helvetica, Constantia, Georgia, "Book Antiqua", "URW Palladio L", serif;
+}
+
+ul { margin: 0; }
+
+#footer {
+    text-align: center;
+    width: 28em;
+    margin: 2em auto 1em;
+    font-size: 0.7em;
+}
+
+a {
+text-decoration: none;
+color: #fb6600;
+}
+
+a:hover {
+text-decoration: none;
+color: #5ebb00;
+}
+
+a img {
+border: 0;
+}
+
+#site {
+    margin: 0 auto;
+    width: 42em;
+    min-height:36em;
+    position: relative;
+}
+
+#header {
+    padding: 0;
+    margin: 0;
+    margin-left:-0.5em;
+    margin-bottom: .5em;
+    font-size: 2em;
+    text-align:center;
+}
+
+#header a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+#header h1 {
+    padding-left: 1em;
+    margin: 0;
+    color: #fb5e00;
+}
+
+.context-nav,
+ul.breadcrumbs {
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+}
+
+.context-nav { right:0; }
+
+.breadcrumbs li { display: inline; }
+.breadcrumbs a {
+    text-decoration: none;
+    color: #fb5e00;
+}
+
+.context-nav a {
+    color: #fb5e00;
+}
+
+.breadcrumbs a:hover { text-decoration: underline; }
+.breadcrumbs .separator { color: #fb5e00; }
+
+#sitenav {
+    text-align: center;
+    border-bottom: .2em dotted #000000;
+    padding-bottom: 1.5em;
+}
+
+#sitenav ul { list-style-type: none; }
+
+#sitenav li {
+    display: inline;
+    margin-left: .2em;
+}
+
+#sitenav a {
+    text-decoration: none;
+    padding: 0.2em;
+    background-color: #fb5e00;
+    color: #00000;
+}
+
+#sitenav .selected a {
+    background-color: #fb5e00;
+    color: #ffffff;
+}
+
+#content-header{
+    padding-bottom:.5em;
+}
+
+#content-header h1{
+    margin-top: .5em;
+    margin-bottom: 0em;
+    color: #fb5e00;
+}
+
+.post-date{
+    float:right;
+    font-style:italic;
+    font-size:.8em;
+    margin-bottom:.1em;
+    
+}
