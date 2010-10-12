@@ -8,7 +8,7 @@
 <div id="sitenav">
     <ul>
         <li{% ifequal page.module site.module %} class="selected" {% endifequal %}>
-            <a href="{{site.full_url[:site.full_url.index('/blog')]}}">Home</a>
+            <a href='{{site.full_url|cut:"blog"]}}'>Home</a>
         </li>
         <li{% ifequal page.module site.module %} class="selected" {% endifequal %}>
             <a href="{{site.listing_url}}">Blog</a>
