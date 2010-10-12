@@ -14,20 +14,20 @@ ul { margin: 0; }
 }
 
 a {
-text-decoration: none;
-color: #fb6600;
+    text-decoration: none;
+    color: #fb6600;
 }
 
 a:hover {
-text-decoration: none;
-color: #5ebb00;
+    text-decoration: none;
+    color: #5ebb00;
 }
 
 a img {
-border: 0;
+    border: 0;
 }
 
-#site {
+#site, #content {
     margin: 0 auto;
     width: 42em;
     min-height:36em;
