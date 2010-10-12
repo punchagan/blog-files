@@ -1,5 +1,5 @@
 {% extends "skeleton/_base.html" %}
-{% block title %}{{site.name}} : {{page.module.name}} : {{page.title}} {% endblock %}
+{% block title %}{{site.name}} - {{page.title}} {% endblock %}
 {% block content %}
 <!-- {% block breadcrumbs %}{% include "skeleton/_breadcrumbs.html"%}{% endblock %} -->
 
@@ -8,7 +8,7 @@
 <div id="sitenav">
     <ul>
         <li{% ifequal page.module site.module %} class="selected" {% endifequal %}>
-            <a href="{{site.full_url}}">Home</a>
+            <a href="{{site.full_url.rstrip(blog)}}">Home</a>
         </li>
         <li{% ifequal page.module site.module %} class="selected" {% endifequal %}>
             <a href="{{site.listing_url}}">Blog</a>
