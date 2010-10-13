@@ -17,11 +17,11 @@
 	{% block extra_js %}{% endblock %}{% endblock %}
 </head>
 <body>
-<div id="site">	
+<div id="content">	
     {% include "skeleton/_header.html" %}
 	{% block content %}{% endblock %}
+    {% include "skeleton/_footer.html" %}
 </div>
-{% include "skeleton/_footer.html" %}
 </body>
 </html>
 {% endblock %}
