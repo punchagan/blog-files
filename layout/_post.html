@@ -3,6 +3,13 @@
 <div id="post-content">
 {% filter typogrify %}
 
+{% block content_header %}
+<div id="outline-2">
+    <h2>{{ page.title }}</h2>
+    <span class="post-date">{{ page.created|date:"D d M Y"}}</span>
+</div>
+{% endblock %}
+
 {% block article %}
     
 {% endblock %}
@@ -11,12 +18,6 @@
 </div>
 {% endblock %}
 
-{% block content_header %}
-<div id="outline-2">
-    <h2>{{ page.title }}</h2>
-    <span class="post-date">{{ page.created|date:"D d M Y"}}</span>
-</div>
-{% endblock %}
 {% block context_nav %}
 {% include "skeleton/_context_nav.html" %}
 {% endblock %}
