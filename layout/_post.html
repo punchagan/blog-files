@@ -4,8 +4,8 @@
 {% filter typogrify %}
 
 {% block content_header %}
-    <h2>{{ page.title }}</h2>
     <span class="post-date">{{ page.created|date:"D d M Y"}}</span>
+    <h2>{{ page.title }}</h2>
 {% endblock %}
 
 {% block article %}
