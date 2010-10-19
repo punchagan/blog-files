@@ -2,6 +2,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: Caslon, Garamond, Helvetica, Constantia, Georgia, "Book Antiqua", "URW Palladio L", serif;
+    font-size: 1.2em;
 }
 
 ul { margin: 0; }
@@ -27,32 +28,34 @@ a img {
     border: 0;
 }
 
-#site, #content {
+#content {
     margin: 0 auto;
     width: 42em;
-    min-height:36em;
     position: relative;
 }
 
-#header, #content .title{
+#content .title{
     padding: 0;
     margin: 0;
     margin-left:-0.5em;
     margin-bottom: .5em;
-    font-size: 2em;
-    text-align:center;
-}
-
-#header a, #content .title{
+    font-size: 3em;
+    text-align: center;
     text-decoration: none;
-    padding: 0;
-    margin: 0;
+    color: #fb5e00;
 }
 
-#header h1 {
-    padding-left: 1em;
+.outline-2 {
+    min-height: 25em;
+}
+
+.outline-2 h2 {
+    padding-left: 0em;
     margin: 0;
     color: #fb5e00;
+    font-size: 2em;
+    margin-top: .5em;
+    margin-bottom: 0em;
 }
 
 .context-nav,
@@ -102,20 +105,11 @@ ul.breadcrumbs {
     color: #ffffff;
 }
 
-#content-header{
-    padding-bottom:.5em;
-}
-
-#content-header h1{
-    margin-top: .5em;
-    margin-bottom: 0em;
-    color: #fb5e00;
-}
 
 .post-date{
     float:right;
     font-style:italic;
     font-size:.8em;
     margin-bottom:.1em;
-    
+    padding-bottom:.5em;
 }

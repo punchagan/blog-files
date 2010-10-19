@@ -1,13 +1,11 @@
 {% extends "skeleton/_body.html" %}
 {% block content_body %}
-<div id="post-content">
+<div id="outline-2">
 {% filter typogrify %}
 
 {% block content_header %}
-<div class="outline-2">
     <h2>{{ page.title }}</h2>
     <span class="post-date">{{ page.created|date:"D d M Y"}}</span>
-</div>
 {% endblock %}
 
 {% block article %}
