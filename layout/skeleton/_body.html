@@ -7,10 +7,10 @@
 {% block sitenav %}
 <div id="sitenav">
     <ul>
-        <li{% ifequal page.module site.module %} class="selected" {% endifequal %}>
+        <li>
             <a href="/">Home</a>
         </li>
-        <li{% ifequal page.module site.module %} class="selected" {% endifequal %}>
+        <li class="selected">
             <a href="{{site.listing_url}}">Blog</a>
         </li>    
         {% for module in site.children %}
