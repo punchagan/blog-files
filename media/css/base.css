@@ -37,8 +37,6 @@ a img {
 #content .title{
     padding: 0;
     margin: 0;
-    margin-left:-0.5em;
-    margin-bottom: .5em;
     font-size: 3em;
     text-align: center;
     text-decoration: none;
@@ -83,7 +81,7 @@ ul.breadcrumbs {
 #sitenav {
     text-align: center;
     border-bottom: .2em dotted #000000;
-    padding-bottom: 1.5em;
+    padding-bottom: 1em;
 }
 
 #sitenav ul { list-style-type: none; }
