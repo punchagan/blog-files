@@ -34,6 +34,20 @@ a img {
     position: relative;
 }
 
+#recent {
+    margin-left: 6em;
+    width: 30em;
+    position: relative;
+    padding-bottom: 1em;
+    border: 1px dotted green;
+}
+
+#timesince {
+    float: right;
+    font-size: 0.7em;
+    color: green;
+}
+
 #content .title{
     padding: 0;
     margin: 0;
@@ -45,6 +59,9 @@ a img {
 
 .outline-2 {
     min-height: 25em;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px dotted #ff5500;
 }
 
 .outline-2 h2 {
