@@ -1,12 +1,8 @@
 {% extends "skeleton/_body.html" %}
-
-{% block content %}
-
-{% block sitenav %}{% endblock %}
+{% block title %}{{site.name}} - Blog {% endblock %}
 
 {% block content_body %}
 {% include "skeleton/_recent.html" %}
-{% endblock %}
 
 {%recent_posts recents 5 %}
 
