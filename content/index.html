@@ -1,1 +1,12 @@
-{% extends "skeleton/_recent.html" %}
+{% include "skeleton/_base.html" %}
+
+{% block content_header %}
+    <span class="post-date">{{ page.created|date:"D d M Y"}}</span>
+    <h2>{{ page.title }}</h2>
+{% endblock %}
+
+{% block article %}
+    
+{% endblock %}
+
+
