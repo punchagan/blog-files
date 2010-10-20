@@ -1,6 +1,5 @@
-<div class="outline-2">
-<h2>Recent Posts</h2>
-
+{% block content_body %}
+<h3>Recent Posts</h3>
 {%recent_posts recents 5 %}
 <ul>
 {%for post in recents %}
@@ -9,4 +8,4 @@
 </li>
 {%endfor%}
 </ul>
-</div>
+{% endblock %}

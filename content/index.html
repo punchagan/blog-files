@@ -1,11 +1,10 @@
 {% extends "skeleton/_base.html" %}
 
+{% block content %}
+
 {% block content_body %}
 {% include "skeleton/_recent.html" %}
 {% endblock %}
-
-{% block content %}
-{%recent_posts recents 5 %}
 
 {%for post in recents %}
 <span class="post-date">{{ post.created|date:"D d M Y"}}</span>
