@@ -96,8 +96,9 @@ ul.breadcrumbs {
 
 #sitenav {
     text-align: center;
-    border-bottom: .2em dotted #000000;
+    border-bottom: 1px dotted #000000;
     padding-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 #sitenav ul { list-style-type: none; }
