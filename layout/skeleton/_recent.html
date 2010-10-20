@@ -5,7 +5,7 @@
 <ul>
 {%for post in recents %}
 <li>
-<a href='{{post.url}}'>{{post.title}}</a> - {{post.created|timesince}}
+<a href='{{post.url}}'>{{post.title}}</a> <div id="timesince"> {{post.created|timesince}} ago</div>
 </li>
 {%endfor%}
 </ul>
