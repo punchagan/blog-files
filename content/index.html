@@ -1,12 +1,17 @@
 {% include "skeleton/_base.html" %}
 
-{% block content_header %}
-    <span class="post-date">{{ page.created|date:"D d M Y"}}</span>
-    <h2>{{ page.title }}</h2>
-{% endblock %}
+{% include "skeleton/_recent.html" %}
 
-{% block article %}
-    
+{% block content %}
+{%recent_posts recents 5 %}
+{%for post in recents %}
+<span class="post-date">{{ page.created|date:"D d M Y"}}</span>
+<h2>{{ page.title }}</h2>
+
+{%render_article post}
 {% endblock %}
+{%endfor%}
+
+
 
 
