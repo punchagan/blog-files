@@ -13,13 +13,6 @@
         <li class="selected">
             <a href="{{site.listing_url}}">Blog</a>
         </li>    
-        {% for module in site.children %}
-        <li{% ifequal page.module module %} class="selected" {% endifequal %}>
-            <a href="{{module.listing_url}}">
-                {{module.name|unslugify}}
-            </a>
-        </li>
-        {% endfor %}
     </ul>
 </div>
 {% endblock %}
