@@ -1,4 +1,4 @@
-{% include "skeleton/_base.html" %}
+{% extends "skeleton/_base.html" %}
 
 {% include "skeleton/_recent.html" %}
 
@@ -8,7 +8,7 @@
 <span class="post-date">{{ page.created|date:"D d M Y"}}</span>
 <h2>{{ page.title }}</h2>
 
-{%render_article post}
+{%render_article post %}
 {% endfor %}
 {% endblock %}
 
