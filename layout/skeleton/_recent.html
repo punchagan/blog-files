@@ -1,4 +1,5 @@
 {% block content_body %}
+<div id="recent">
 <h3>Recent Posts</h3>
 {%recent_posts recents 5 %}
 <ul>
@@ -8,4 +9,5 @@
 </li>
 {%endfor%}
 </ul>
+</div>
 {% endblock %}

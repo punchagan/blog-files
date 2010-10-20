@@ -1,4 +1,4 @@
-{% extends "skeleton/_base.html" %}
+{% extends "skeleton/_body.html" %}
 
 {% block content %}
 
@@ -9,9 +9,11 @@
 {%recent_posts recents 5 %}
 
 {%for post in recents %}
+<div class="outline-2">
 <span class="post-date">{{ post.created|date:"D d M Y"}}</span>
 <a href='{{post.url}}'><h2>{{post.title}}</h2></a>
 {%render_article post %}
+</div>
 {% endfor %}
 
 {% endblock %}
