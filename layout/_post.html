@@ -1,4 +1,9 @@
 {% extends "skeleton/_body.html" %}
+
+{% block context_nav %}
+{% include "skeleton/_context_nav.html" %}
+{% endblock %}
+
 {% block content_body %}
 <div class="outline-2">
 {% filter typogrify %}
@@ -13,9 +18,30 @@
 {% endblock %}
     
 {% endfilter %}
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /**
+  * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+  */
+  (function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'http://rusticreverie.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=rusticreverie">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<script type="text/javascript">
+  var disqus_shortname = 'rusticreverie';
+  (function () {
+  var s = document.createElement('script'); s.async = true;
+  s.src = 'http://disqus.com/forums/rusticreverie/count.js';
+  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+  }());
+</script>
+
 </div>
 {% endblock %}
 
-{% block context_nav %}
-{% include "skeleton/_context_nav.html" %}
-{% endblock %}
