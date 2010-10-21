@@ -15,26 +15,25 @@
 	{% block extra_css %}{% endblock %}{% endblock %}{% block js %}
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
 	{% block extra_js %}
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-          /**
-          * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
-          */
-          (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = 'http://rusticreverie.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=rusticreverie">comments powered by Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
         {% endblock %}{% endblock %}
 </head>
 <body>
 <div id="content">	
     {% include "skeleton/_header.html" %}
 	{% block content %}{% endblock %}
-    {% include "skeleton/_footer.html" %}
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /**
+      * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+      */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://rusticreverie.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=rusticreverie">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
 
     <script type="text/javascript">
       var disqus_shortname = 'rusticreverie';
@@ -44,8 +43,8 @@
       (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
       }());
     </script>
-</body>
-
+    {% include "skeleton/_footer.html" %}
 </div>
+</body>
 </html>
 {% endblock %}
