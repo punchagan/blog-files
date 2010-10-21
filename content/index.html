@@ -11,6 +11,9 @@
 <span class="post-date">{{ post.created|date:"D d M Y"}}</span>
 <a href='{{post.url}}'><h2>{{post.title}}</h2></a>
 {%render_article post %}
+<div class="comment-count">
+<a href="{{post.url}}#disqus_thread">Comments</a>
+</div>
 </div>
 {% endfor %}
 
