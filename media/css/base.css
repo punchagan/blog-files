@@ -57,7 +57,6 @@ a img {
 }
 
 .outline-2 {
-    min-height: 25em;
     padding: 0.5em;
     margin-bottom: 1em;
     border: 1px dotted #ff5500;
@@ -112,14 +111,8 @@ ul.breadcrumbs {
     text-decoration: none;
     padding: 0.2em;
     background-color: #fb5e00;
-    color: #000000;
+    color: #fff;
 }
-
-#sitenav .selected a {
-    background-color: #fb5e00;
-    color: #ffffff;
-}
-
 
 .post-date{
     float:right;
@@ -127,4 +120,9 @@ ul.breadcrumbs {
     font-size:.8em;
     margin-bottom:.1em;
     padding-bottom:.5em;
+}
+
+.timestamp {
+    color: #05F;
+    font-size: 0.7em;
 }
