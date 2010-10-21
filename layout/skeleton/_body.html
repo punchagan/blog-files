@@ -5,15 +5,13 @@
 
 {% block context_nav %}{% endblock %}
 {% block sitenav %}
-<div id="sitenav">
-    <ul>
-        <li>
-            <a href="/">Home</a>
-        </li>
-        <li class="selected">
-            <a href="{{site.listing_url}}">Blog</a>
-        </li>    
-    </ul>
+<div id='sitenav'>
+  <ul>
+    <li> <a href='/index.html'>Home</a> </li>
+    <li> <a href='/blog'>Blog</a> </li>    
+    <li> <a href='/blogs.html> I Read </a>
+    <li> <a href='/quotes.html> Quote Archive </a>
+  </ul>
 </div>
 {% endblock %}
 {% block content_body %}{% endblock %}{% endblock %}
