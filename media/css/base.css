@@ -126,3 +126,12 @@ ul.breadcrumbs {
     color: #05F;
     font-size: 0.7em;
 }
+
+#footnotes h2 {
+    font-size: 1em;
+    color: #aaa;
+}
+
+#text-footnotes{
+    font-size: 0.8em;
+}
