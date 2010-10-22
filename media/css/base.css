@@ -2,7 +2,6 @@ body {
     padding: 0;
     margin: 0;
     font-family: Caslon, Garamond, Helvetica, Constantia, Georgia, "Book Antiqua", "URW Palladio L", serif;
-    font-size: 1.2em;
 }
 
 ul { margin: 0; }
@@ -32,6 +31,11 @@ a img {
     margin: 0 auto;
     width: 40em;
     position: relative;
+    font-size: 1.2em;
+}
+
+#content code{
+    font-size: 1.2em;
 }
 
 #recent {
@@ -133,5 +137,9 @@ ul.breadcrumbs {
 }
 
 #text-footnotes{
+    font-size: 0.8em;
+}
+
+.footref{
     font-size: 0.8em;
 }
