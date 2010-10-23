@@ -7,13 +7,7 @@
 {%recent_posts recents 5 %}
 
 {%for page in recents %}
-<div class="outline-2">
-{% include "skeleton/_postheading.html" %}
-{%render_article page %}
-<div class="comment-count">
-<a href="{{page.url}}#disqus_thread">Comments</a>
-</div>
-</div>
+{%include "skeleton/_postlisting.html" %}
 {% endfor %}
 
 {% endblock %}

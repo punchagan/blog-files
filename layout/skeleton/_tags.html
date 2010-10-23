@@ -7,13 +7,19 @@
 </div>
 {%for page in posts %}
 <div class="outline-2">
+{% filter typogrify %}
+
+{% block content_header %}
 {% include "skeleton/_postheading.html" %}
-{%render_article page %}
-<div class="comment-count">
-<a href="{{page.url}}#disqus_thread">Comments</a>
+{% endblock %}
+
+{% block article %}
+    
+{% endblock %}
+    
+{% endfilter %}
+
 </div>
-</div>
-{% endfor %}
 
 {% endblock %}
 

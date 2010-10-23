@@ -1,7 +1,8 @@
 <span class="post-date">{{ page.created|date:"D d M Y"}}</span>
 <a href='{{page.url}}'><h2>{{page.title}}</h2></a>
+
 <span class="tags">
-{%for tag in page.categories %}
-<a href="{{site.url}}/tag/{{tag}}">{{tag}}</a>  
-{%endfor%}
+  {%for tag in page.categories %}
+  <a href="{{site.url}}/tag/{{tag}}.html">{{tag}}</a>  
+  {%endfor%}
 </span>
