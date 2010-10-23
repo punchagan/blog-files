@@ -140,13 +140,19 @@ ul.breadcrumbs {
     padding-bottom:.5em;
 }
 
-.tags a{
+.tags{
     float:right;
     font-size:.7em;
     color: green;
+    text-align: right;
+}
+
+.tags a{
+    color: green;
     margin: 0.1em;
     padding: 0 0.5em;
-    background-color: wheat;
+    background-color: #FCC;
+    text-align: right;
 }
 
 #footnotes h2 {
