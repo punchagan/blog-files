@@ -51,6 +51,11 @@ a img {
     color: green;
 }
 
+.all-posts {
+    float: right;
+    font-size: 0.7em;
+}
+
 #content .title{
     padding: 0;
     margin: 0;
