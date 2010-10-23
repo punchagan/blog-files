@@ -83,6 +83,16 @@ CONTENT_PROCESSORS = {
             }
 }
 
+SITE_PRE_PROCESSORS = {
+    'content/': {
+        'hydeengine.site_pre_processors.CategoryManager' : {
+            'archiving': True,
+            'output_folder': 'tags',
+            'template': 'skeleton/_tags.html',
+        }
+    }
+}
+
 SITE_POST_PROCESSORS = {
     # 'media/js': {
     #        'hydeengine.site_post_processors.FolderFlattener' : {
