@@ -45,6 +45,15 @@ a img {
     padding-bottom: 1em;
 }
 
+#recent h3{
+    text-align: center;
+    margin: 0em;
+}
+
+#recent ul{
+    margin-top: 1em;
+}
+
 #timesince {
     float: right;
     font-size: 0.7em;
