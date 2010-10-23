@@ -6,12 +6,12 @@
 
 {%recent_posts recents 5 %}
 
-{%for post in recents %}
+{%for page in recents %}
 <div class="outline-2">
 {% include "skeleton/_postheading.html" %}
-{%render_article post %}
+{%render_article page %}
 <div class="comment-count">
-<a href="{{post.url}}#disqus_thread">Comments</a>
+<a href="{{page.url}}#disqus_thread">Comments</a>
 </div>
 </div>
 {% endfor %}

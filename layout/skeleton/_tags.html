@@ -3,14 +3,14 @@
 
 {% block content_body %}
 <div id="recent"
-<h3>Showing posts in {{category}}</h3>
+<h3>Showing posts tagged {{category}}</h3>
 </div>
-{%for post in posts %}
+{%for page in posts %}
 <div class="outline-2">
 {% include "skeleton/_postheading.html" %}
-{%render_article post %}
+{%render_article page %}
 <div class="comment-count">
-<a href="{{post.url}}#disqus_thread">Comments</a>
+<a href="{{page.url}}#disqus_thread">Comments</a>
 </div>
 </div>
 {% endfor %}
