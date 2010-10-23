@@ -144,6 +144,7 @@ ul.breadcrumbs {
     float:right;
     color: green;
     text-align: right;
+    font-size: 0.6em;
 }
 
 .tags a{
