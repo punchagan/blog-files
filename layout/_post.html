@@ -9,8 +9,7 @@
 {% filter typogrify %}
 
 {% block content_header %}
-    <span class="post-date">{{ page.created|date:"D d M Y"}}</span>
-    <h2>{{ page.title }}</h2>
+{% include "skeleton/_postheading.html" %}
 {% endblock %}
 
 {% block article %}
