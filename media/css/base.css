@@ -131,7 +131,7 @@ ul.breadcrumbs {
     padding-bottom:.5em;
 }
 
-.tags{
+.tags a{
     float:right;
     font-style:italic;
     font-size:.7em;
