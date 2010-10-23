@@ -142,16 +142,14 @@ ul.breadcrumbs {
 
 .tags{
     float:right;
-    font-size:.7em;
     color: green;
     text-align: right;
 }
 
 .tags a{
-    color: green;
     margin: 0.1em;
     padding: 0 0.5em;
-    background-color: #FCC;
+    background-color: #FEA;
     text-align: right;
 }
 
