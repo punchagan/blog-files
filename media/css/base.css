@@ -131,6 +131,13 @@ ul.breadcrumbs {
     padding-bottom:.5em;
 }
 
+.tags{
+    float:right;
+    font-style:italic;
+    font-size:.7em;
+    color: green;
+}
+
 .timestamp {
     color: #05F;
     font-size: 0.7em;
