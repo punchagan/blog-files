@@ -134,5 +134,4 @@ TEMPLATE_DIRS = (LAYOUT_DIR, CONTENT_DIR, TMP_DIR, MEDIA_DIR)
 
 INSTALLED_APPS = (
     'hydeengine',
-    'django.contrib.webdesign',
 )
