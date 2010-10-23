@@ -3,23 +3,12 @@
 
 {% block content_body %}
 <div id="recent"
-<h3>Showing posts tagged {{category}}</h3>
+     <h3>Showing posts tagged {{category}}</h3>
 </div>
+
 {%for page in posts %}
-<div class="outline-2">
-{% filter typogrify %}
-
-{% block content_header %}
-{% include "skeleton/_postheading.html" %}
-{% endblock %}
-
-{% block article %}
-    
-{% endblock %}
-    
-{% endfilter %}
-
-</div>
+{%include "skeleton/_postheading.html" %}
+{%endfor%}
 
 {% endblock %}
 
