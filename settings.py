@@ -84,10 +84,10 @@ CONTENT_PROCESSORS = {
 }
 
 SITE_PRE_PROCESSORS = {
-    'content/': {
-        'hydeengine.site_pre_processors.CategoryManager' : {
+    '/': {
+        'hydeengine.site_pre_processors.CategoriesManager' : {
             'archiving': True,
-            'output_folder': 'tags',
+            'output_folder': 'tag',
             'template': 'skeleton/_tags.html',
         }
     }
