@@ -9,7 +9,7 @@
 
 {%regroup node.pages by created|date:"Y" as pages_year %}
 {% for year in pages_year|slice:"-1" %}
-<div id="outline-2">
+<div class="outline-2">
   <h2> {{year.grouper}} </h2>
 
   <ul>
