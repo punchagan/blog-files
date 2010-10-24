@@ -10,17 +10,17 @@ ul { margin: 0; }
     text-align: center;
     margin: 2em auto 1em;
     font-size: 0.7em;
-    border: 1px dotted #BBB;
+    border: 1px dotted #AAA;
 }
 
 a {
     text-decoration: none;
-    color: #888;
+    color: #666;
 }
 
 a:hover {
     text-decoration: none;
-    color: #BBB;
+    color: #AAA;
 }
 
 a img {
@@ -45,7 +45,7 @@ a img {
 
 #recent h3{
     text-align:center;
-    color: #999;
+    color: #666;
     margin: 0em;
 }
 
@@ -58,24 +58,25 @@ a img {
 #timesince {
     float: right;
     font-size: 0.7em;
-    color: #BBB;
+    color: #AAA;
 }
 
 .post-listing{
     list-style: decimal;
     margin: 0em;
+    color: #666;
 }
 
 .all-posts a{
     font-size: 0.7em;
     color: #fff;
-    background-color: #BBB;
+    background-color: #AAA;
     padding: 0.2em;
 }
 
 .all-posts a:hover {
     color: #FFF;
-    background-color: #999;
+    background-color: #666;
 }
 
 #content .title{
@@ -89,7 +90,7 @@ a img {
 .outline-2 {
     padding: 0.5em;
     margin-bottom: 1em;
-    border: 1px dotted #BBB;
+    border: 1px dotted #AAA;
 }
 
 .outline-2 h2 {
@@ -117,7 +118,7 @@ a img {
 
 #sitenav {
     text-align: center;
-    border-bottom: 1px dotted #BBB;
+    border-bottom: 1px dotted #AAA;
     padding-bottom: 1em;
     margin-bottom: 1em;
 }
@@ -136,12 +137,12 @@ a img {
     padding: 0.2em;
     margin: 0.2em;
     color: #FFF;
-    background-color: #999;
+    background-color: #666;
 }
 
 #sitenav a:hover {
     color: #FFF;
-    background-color: #BBB;
+    background-color: #AAA;
 }
 
 .post-date{
@@ -161,7 +162,12 @@ a img {
     margin: 0.1em;
     padding: 0 0.5em;
     color: #FFF;
-    background-color: #999;
+    background-color: #666;
+}
+
+.tags a:hover{
+    color: #FFF;
+    background-color: #AAA;
 }
 
 #footnotes h2 {
