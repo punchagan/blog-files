@@ -61,13 +61,18 @@ a img {
     color: #BBB;
 }
 
+.all-posts ul{
+    list-style: decimal;
+}
+
 .all-posts a{
     font-size: 0.7em;
     color: #fff;
     background-color: #BBB;
+    padding: 0.2em;
 }
 
-#all-posts a:hover {
+.all-posts a:hover {
     color: #FFF;
     background-color: #999;
 }
