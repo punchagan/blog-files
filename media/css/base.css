@@ -8,19 +8,19 @@ ul { margin: 0; }
 
 #footer {
     text-align: center;
-    width: 50em;
     margin: 2em auto 1em;
     font-size: 0.7em;
+    border: 1px dotted #BBB;
 }
 
 a {
     text-decoration: none;
-    color: #fb6600;
+    color: #888;
 }
 
 a:hover {
     text-decoration: none;
-    color: #5ebb00;
+    color: #BBB;
 }
 
 a img {
@@ -39,102 +39,107 @@ a img {
 }
 
 #recent {
-    margin-left: 6em;
+    padding: 0em 0em 1em 5em;
     width: 30em;
-    position: relative;
-    padding-bottom: 1em;
 }
 
 #recent h3{
-    text-align: center;
+    text-align:center;
+    color: #999;
     margin: 0em;
 }
 
 #recent ul{
     margin-top: 1em;
+    list-style: none;
+    padding: 0em;
 }
 
 #timesince {
     float: right;
     font-size: 0.7em;
-    color: green;
+    color: #BBB;
 }
 
-.all-posts {
-    float: right;
+.all-posts a{
     font-size: 0.7em;
+    color: #fff;
+    background-color: #BBB;
+}
+
+#all-posts a:hover {
+    color: #FFF;
+    background-color: #999;
 }
 
 #content .title{
+    color: #000;
     padding: 0;
     margin: 0;
     font-size: 3em;
     text-align: center;
-    text-decoration: none;
-    color: #fb5e00;
 }
 
 .outline-2 {
     padding: 0.5em;
     margin-bottom: 1em;
-    border: 1px dotted #ff5500;
+    border: 1px dotted #BBB;
 }
 
 .outline-2 h2 {
-    padding-left: 0em;
-    margin: 0;
-    color: #fb5e00;
+    color: #000;
     font-size: 2em;
-    margin-top: .5em;
+    margin-top: 0.5em;
     margin-bottom: 0em;
 }
 
-.context-nav,
-ul.breadcrumbs {
+.outline-2 h2 {
+    color: #000;
+    font-size: 2em;
+    margin: 0em;
+    padding: 0.2em 0;
+}
+
+.context-nav{
     list-style-type: none;
     padding: 0;
     position: absolute;
+    float: right;
 }
 
 .context-nav { right:0; }
 
-.breadcrumbs li { display: inline; }
-.breadcrumbs a {
-    text-decoration: none;
-    color: #fb5e00;
-}
-
-.context-nav a {
-    color: #fb5e00;
-}
-
-.breadcrumbs a:hover { text-decoration: underline; }
-.breadcrumbs .separator { color: #fb5e00; }
-
 #sitenav {
     text-align: center;
-    border-bottom: 1px dotted #000000;
+    border-bottom: 1px dotted #BBB;
     padding-bottom: 1em;
     margin-bottom: 1em;
 }
 
-#sitenav ul { list-style-type: none; }
+#sitenav ul{ 
+    list-style-type: none; 
+    padding:0em;
+}
 
 #sitenav li {
     display: inline;
-    margin-left: .2em;
 }
 
 #sitenav a {
     text-decoration: none;
     padding: 0.2em;
-    background-color: #fb5e00;
-    color: #fff;
+    margin: 0.2em;
+    color: #FFF;
+    background-color: #999;
+}
+
+#sitenav a:hover {
+    color: #FFF;
+    background-color: #BBB;
 }
 
 .post-date{
     float:right;
-    font-style:italic;
     font-size:.8em;
     margin-bottom:.1em;
     padding-bottom:.5em;
@@ -142,7 +147,6 @@ ul.breadcrumbs {
 
 .tags{
     float:right;
-    color: green;
     text-align: right;
     font-size: 0.6em;
 }
@@ -150,13 +154,12 @@ ul.breadcrumbs {
 .tags a{
     margin: 0.1em;
     padding: 0 0.5em;
-    background-color: #FEA;
-    text-align: right;
+    color: #FFF;
+    background-color: #999;
 }
 
 #footnotes h2 {
-    font-size: 1em;
-    color: #aaa;
+    font-size: 0.9em;
 }
 
 #text-footnotes{
