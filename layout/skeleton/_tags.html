@@ -3,7 +3,7 @@
 
 {% block content_body %}
 <div id="recent"
-     <h3>Showing posts tagged {{category}}</h3>
+     <h3>Showing posts tagged <a href="{{site.url}}/tag/{{category}}.html">{{category}}</a></h3>
 </div>
 
 {%for page in posts %}
