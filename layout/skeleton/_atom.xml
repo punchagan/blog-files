@@ -35,7 +35,7 @@
                 <published>{{ post.created|xmldatetime }}</published>
                 <id>{{ post.full_url }}</id>
                 {% block entry_extra %}{% endblock %}
-                <content type="xhtml">
+                <content type="html">
                     {% filter force_escape %}
                         {% render_article post %}
                     {% endfilter %}
