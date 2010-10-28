@@ -74,6 +74,8 @@ a img {
     padding: 0.2em;
     border-radius: 0.5em;
     -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -khtml-border-radius: 0.5em;
 }
 
 .all-posts a:hover {
@@ -142,6 +144,8 @@ a img {
     background-color: #666;
     border-radius: 0.5em;
     -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -khtml-border-radius: 0.5em;    
 }
 
 #sitenav a:hover {
@@ -169,6 +173,8 @@ a img {
     background-color: #666;
     border-radius: 0.5em;
     -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -khtml-border-radius: 0.5em;
 }
 
 .tags a:hover{
