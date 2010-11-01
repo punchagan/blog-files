@@ -1,7 +1,7 @@
 import os
 
 ROOT_PATH = os.path.abspath(os.path.dirname(__file__))
-PUB_PATH = os.path.abspath("/home/punchagan/public_html")
+PUB_PATH = os.path.abspath("/home/punchagan/html")
 
 #Directories
 LAYOUT_DIR = os.path.join(ROOT_PATH, 'layout')
