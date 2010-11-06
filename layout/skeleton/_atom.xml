@@ -6,7 +6,7 @@
     <title>{% block title %}{{ site.name }}{% endblock %}</title>
     
     {% block self_url %}
-        <link href="{{ page.node.full_url }}/feed/" rel="self" type="application/atom+xml" />
+        <link href="{{ page.node.full_url }}/atom.xml" rel="self" type="application/atom+xml" />
     {% endblock %}
 
     {% block alternate_url %}
