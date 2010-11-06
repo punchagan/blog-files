@@ -1,6 +1,6 @@
 {% block content_body %}
 <div id="recent">
-<h3>Recent Posts</h3>
+<h3>Recent Posts <span class="feed"> <a href="{{site.url}}/atom.xml"><img src="{{site.url}}/media/images/feed.jpg" alt="Subscribe" target="_blank"/> </a></span></h3>
 {%recent_posts recents 5 %}
 <ul>
 {%for post in recents %}
@@ -10,6 +10,5 @@
 {%endfor%}
 </ul>
 <span class="all-posts"> <a href='{{page.node.listing_url}}'>All Posts</a> </span>
-<span class="feed"> <a href="{{site.url}}/atom.xml"><img src="{{site.url}}/media/images/feed.png" width=20 alt="Subscribe" rel="nofollow" target="_blank"/> </a></span>
 </div>
 {% endblock %}
