@@ -55,7 +55,7 @@ a img {
     padding: 0em;
 }
 
-#timesince {
+.timesince {
     float: right;
     font-size: 0.7em;
     color: #AAA;
