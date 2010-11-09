@@ -51,7 +51,8 @@ a img {
     margin: 0;
     font-size: 3em;
     text-align: center;
-    padding-bottom: 0.3em;
+    padding: 0 0.1em;
+
 }
 
 .outline-2 h2 {
