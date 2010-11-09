@@ -92,12 +92,26 @@ a img {
     color: #8585e5;
 }
 
+.post-prev{
+    float:left;
+    font-size:.9em;
+    margin: 3em 0em;
+    color: #8585e5;
+}
+
 .post-tags{
     float:right;
     text-align: right;
     font-size: 0.7em;
     margin: 3em 0em;
     width: 15em;
+}
+
+.post-prev{
+    float:right;
+    font-size:.9em;
+    margin: 3em 0em;
+    color: #8585e5;
 }
 
 .timesince {
