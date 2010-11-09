@@ -94,7 +94,6 @@ a img {
 
 .post-prev{
     float:left;
-    font-size:.9em;
     color: #8585e5;
 }
 
@@ -108,7 +107,6 @@ a img {
 
 .post-next{
     float:right;
-    font-size:.9em;
     color: #8585e5;
 }
 
