@@ -95,7 +95,6 @@ a img {
 .post-prev{
     float:left;
     font-size:.9em;
-    margin: 3em 0em;
     color: #8585e5;
 }
 
@@ -107,11 +106,12 @@ a img {
     width: 15em;
 }
 
-.post-prev{
+.post-next{
     float:right;
     font-size:.9em;
-    margin: 3em 0em;
     color: #8585e5;
+    margin: 0em 10em 0em 0em;
+
 }
 
 .timesince {
