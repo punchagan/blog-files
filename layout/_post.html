@@ -1,12 +1,9 @@
 {% extends "skeleton/_body.html" %}
 
-{% block context_nav %}
-{% include "skeleton/_context_nav.html" %}
-{% endblock %}
-
 {% block content_body %}
-<div class="outline-2">
 {% filter typogrify %}
+{% include "skeleton/_postmetainfo.html" %}
+<div class="outline-2">
 
 {% block content_header %}
 {% include "skeleton/_postheading.html" %}

@@ -6,21 +6,13 @@ body {
 
 ul { margin: 0; }
 
-#footer {
-    text-align: center;
-    margin: 2em auto 1em;
-    font-size: 0.7em;
-    border: 1px dotted #AAA;
-}
-
 a {
     text-decoration: none;
-    color: #666;
+    color: #8585e5;
 }
 
 a:hover {
     text-decoration: none;
-    color: #AAA;
 }
 
 a img {
@@ -29,136 +21,93 @@ a img {
 
 #content {
     margin: 0 auto;
-    width: 40em;
+    width: 50em;
     position: relative;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
-#content code{
-    font-size: 1.2em;
+#sitenav, .outline-2 {
+    margin: 0 10em;
+    margin-bottom: 1em;
+    width: 30em;
 }
 
-#recent {
-    padding: 0em 0em 1em 3em;
-    width: 34em;
+#sitenav {
+    margin-top: 2em;
+    text-align: center;
 }
 
-#recent h3{
-    text-align:center;
-    color: #666;
-    margin: 0em;
-}
 
-#recent ul{
-    margin-top: 1em;
-    list-style: none;
-    padding: 0em;
-}
-
-.timesince {
-    float: right;
+#footer {
+    text-align: center;
+    margin: 2em auto 1em;
     font-size: 0.7em;
-    color: #AAA;
 }
 
-.post-listing{
-    list-style: decimal;
-    margin: 0em;
-    color: #666;
-}
 
-.all-posts a{
-    font-size: 0.7em;
-    color: #fff;
-    background-color: #AAA;
-    padding: 0.2em;
-    border-radius: 0.5em;
-    -moz-border-radius: 0.5em;
-    -webkit-border-radius: 0.5em;
-    -khtml-border-radius: 0.5em;
-}
-
-.all-posts a:hover {
-    color: #FFF;
-    background-color: #666;
-}
-
-#content .title{
-    color: #000;
+.title{
+    color: #8585e5;
     padding: 0;
     margin: 0;
     font-size: 3em;
     text-align: center;
-}
-
-.outline-2 {
-    padding: 0.5em;
-    margin-bottom: 1em;
-    border: 1px dotted #AAA;
+    border-bottom: 1px solid #AAA;
+    padding-bottom: 0.3em;
 }
 
 .outline-2 h2 {
-    color: #000;
+    color: #8585e5;
     font-size: 2em;
     margin-top: 0.5em;
     margin-bottom: 0em;
 }
 
-.outline-2 h2 {
-    color: #000;
-    font-size: 2em;
-    margin: 0em;
-    padding: 0.2em 0;
-}
-
-.context-nav{
-    list-style-type: none;
-    padding: 0;
-    position: absolute;
-    float: right;
-}
-
-.context-nav { right:0; }
-
-#sitenav {
-    text-align: center;
-    border-bottom: 1px dotted #AAA;
-    padding-bottom: 1em;
-    margin-bottom: 1em;
-}
-
 #sitenav ul{ 
     list-style-type: none; 
-    padding:0em;
+    padding: 0em;
+    border: 1px dotted #8585e5;
+
 }
 
 #sitenav li {
     display: inline;
+    margin: 0 4em;
 }
 
 #sitenav a {
     text-decoration: none;
-    padding: 0.2em;
-    margin: 0.2em;
-    color: #FFF;
-    background-color: #666;
-    border-radius: 0.5em;
-    -moz-border-radius: 0.5em;
-    -webkit-border-radius: 0.5em;
-    -khtml-border-radius: 0.5em;    
-}
-
-#sitenav a:hover {
-    color: #FFF;
-    background-color: #AAA;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #8585e5;
 }
 
 .post-date{
-    float:right;
-    font-size:.8em;
-    margin-bottom:.1em;
-    padding-bottom:.5em;
+    float:left;
+    font-size:.9em;
+    margin: 3em 0em;
+    color: #8585e5;
 }
+
+.post-tags{
+    float:right;
+    text-align: right;
+    font-size: 0.7em;
+    margin: 3em 0em;
+    width: 15em;
+}
+
+.timesince {
+    color: #8585e5;
+    font-size: 0.6em;
+}
+
+.post-listing{
+    list-style: decimal;
+    margin: 0em;
+    font-size: 1em;
+}
+
 
 .tags{
     float:right;
@@ -166,24 +115,25 @@ a img {
     font-size: 0.6em;
 }
 
-.tags a{
-    margin: 0.1em;
-    padding: 0 0.5em;
+.post-tags a, .tags a{
+    margin: 0.1em 0.1em;
+    padding: 0 0.3em;
     color: #FFF;
-    background-color: #666;
+    background-color: #8585e5;
     border-radius: 0.5em;
     -moz-border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
     -khtml-border-radius: 0.5em;
 }
 
-.tags a:hover{
-    color: #FFF;
-    background-color: #AAA;
+.feed{
+    text-align: center;
+    margin: 0.2em;
+    padding: 0.2em;
 }
 
 #footnotes h2 {
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 
 #text-footnotes{
@@ -192,4 +142,6 @@ a img {
 
 .footref{
     font-size: 0.8em;
+    padding: 0em;
+    margin: 0em;
 }

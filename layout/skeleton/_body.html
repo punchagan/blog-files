@@ -1,17 +1,5 @@
 {% extends "skeleton/_base.html" %}
 {% block title %}{{site.name}} - {{page.title}} {% endblock %}
 {% block content %}
-<!-- {% block breadcrumbs %}{% include "skeleton/_breadcrumbs.html"%}{% endblock %} -->
-
-{% block context_nav %}{% endblock %}
-{% block sitenav %}
-<div id="sitenav">
-  <ul>
-    <li> <a href="/index.html">Home</a> </li>
-    <li> <a href="/blog">Blog</a> </li>    
-    <li> <a href="/blogs.html"> I Read </a></li>
-    <li> <a href="/quotes.html"> Quote Archive </a></li>
-  </ul>
-</div>
+{% block content_body %}{% endblock %}
 {% endblock %}
-{% block content_body %}{% endblock %}{% endblock %}

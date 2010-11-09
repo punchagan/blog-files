@@ -1,0 +1,6 @@
+<span class="post-date">{{ page.created|date:"D d M Y"}}</span>
+<span class="post-tags">
+  {%for tag in page.categories %}
+  <a href="{{site.url}}/tag/{{tag}}.html">{{tag}}</a> 
+  {%endfor%}
+</span>
