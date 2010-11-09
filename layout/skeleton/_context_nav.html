@@ -1,12 +1,12 @@
 {% extends "skeleton/_root.html" %}
 {% block all %}
-<div class="post-prev">
+<span class="post-next">
 <a
    {%if page.next%}
    href="{{page.next.url}}"{%endif%}> &lt; </a>
-</div>
-<div class="post-next">
+</span>
+<span class="post-prev">
 <a {%if page.prev%}
     href="{{page.prev.url}}"{%endif%}> &gt; </a>
-</div>
+</span>
 {% endblock %}
