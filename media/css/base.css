@@ -164,13 +164,14 @@ hr {
 }
 
 #sitenav{
-    margin: 4em;
+    margin-bottom: 4em;
 }
 
 .post-tags li {
     display:inline;
     padding:1pt;
-    font-weight: bold;
+    color: #BBBBBB;
+    font-weight:bold;
 }
 
 .post-tags a {
