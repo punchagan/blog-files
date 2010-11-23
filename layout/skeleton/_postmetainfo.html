@@ -5,16 +5,9 @@
 </div>
 
 <div id="right-bar">
-  {% include "skeleton/_context_nav.html" %}
   <ul id="post-tags">
     {%for tag in page.categories %}
     <li>{<a href="{{site.url}}/tag/{{tag}}.html">{{tag}}</a>}</li>
     {%endfor%}
   </ul>
-  {% include "skeleton/_sitenav.html" %}
-  <span class="feed">
-    <a href="{{site.url}}/atom.xml">
-      <img src="{{site.url}}/media/images/feed.jpg" alt="Subscribe" />
-    </a>
-  </span>
 </div>

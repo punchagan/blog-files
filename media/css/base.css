@@ -181,6 +181,10 @@ hr {
     padding:1pt;
 }
 
+.outline-2 {
+    margin-bottom: 5em;
+}
+
 .outline-2 h2 {
     font-size:1.25em;
     position:relative;
