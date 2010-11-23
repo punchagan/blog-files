@@ -1,6 +1,9 @@
 <div class="left-bar">
   <span class="post-date">
-  {{ page.created|date:"D d M Y"}}
+  <a href='{{page.url}}'>{{ page.created|date:"Y-M-d, D"}}</a>
+  </span>
+  <span class="comment-count">
+    <a href="{{page.url}}#disqus_thread">Comments</a>
   </span>
 </div>
 
