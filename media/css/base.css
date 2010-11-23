@@ -142,7 +142,6 @@ hr {
 }
 
 .right-bar {
-    color:#BBBBBB;
     font-size:10pt;
     left:530px;
     position:absolute;
@@ -171,6 +170,11 @@ hr {
 .post-tags li {
     display:inline;
     padding:1pt;
+    font-weight: bold;
+}
+
+.post-tags a {
+    color: #BBBBBB;
 }
 
 .outline-2 {
