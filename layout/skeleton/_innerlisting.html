@@ -8,31 +8,31 @@
 {%endifnotequal%}
 {%regroup node.pages by created|date:"Y" as pages_year %}
 {% for year in pages_year|slice:"-1" %}
-<div class="listing">
-  <h2> {{year.grouper}} </h2>
-
-  <ul class="post-listing">
+<div class="listing-year">
+  <h2> {{year.grouper}} </h2> 
+  {{year.list|length}} posts
+  <ol class="group">
     {% for page in year.list %}
     {% ifnotequal page node.listing_page %}
     {% if page.display_in_list %}
-    <li><a href="{{page.url}}">
+    <li class="post"><h4><a href="{{page.url}}">
         {% with page.name_without_extension|remove_date_prefix|unslugify as default_title %}
-        {{page.title|default_if_none:default_title}}</a>  
-      {% endwith %} <span class="timesince"> {{page.created|timesince}} ago</span>
-      <span class="tags">
-        {%for tag in page.categories %}
-        <a href="{{site.url}}/tag/{{tag}}.html">{{tag}}</a>  
-        {%endfor%}
+        {{page.title|default_if_none:default_title}}</a></h4>
+      {% endwith %} 
+      <span class="post-info"> {{page.created|timesince}} ago
+        <ul class="post-tags">
+          {%for tag in page.categories %}
+          <li>{<a href="{{site.url}}/tag/{{tag}}.html">{{tag}}</a>}</li>
+          {%endfor%}
+        </ul>
       </span>
     </li>
     {%endif%}
     {% endifnotequal %}
     {% endfor %}
-  </ul>
-
+  </ol>
 </div>
 {% endfor %}
-
 
 {% endblock %}
     
