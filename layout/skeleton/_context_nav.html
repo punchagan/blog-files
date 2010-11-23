@@ -2,16 +2,16 @@
 {% block all %}
 <ul id="contextnav">
   <li><a 
-         {%if page.prev%}
-         href="{{page.prev.url}}"
-         {%endif%}> 
-      Prev </a>
-  </li>
-  <li><a 
          {%if page.next%}
          href="{{page.next.url}}"
          {%endif%}> 
-      Next </a>
+      Older </a>
+  </li>
+  <li><a 
+         {%if page.prev%}
+         href="{{page.prev.url}}"
+         {%endif%}> 
+      Newer </a>
   </li>
 </ul>
 {% endblock %}
