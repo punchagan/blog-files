@@ -32,20 +32,7 @@ body {
 h1 {
     font-size:3em;
     line-height:1;
-    padding-bottom:1em;
-    padding-left:0;
-    padding-right:0;
-    padding-top:0.5em;
     text-align:center;
-}
-
-h1 a {
-    color:#444444;
-    font-weight:bold;
-    padding-bottom:0;
-    padding-left:0.25em;
-    padding-right:0.25em;
-    padding-top:0;
 }
 
 h2, h3 {
@@ -161,7 +148,7 @@ hr {
     width:10em;
 }
 
-#sitenav, #contextnav, #post-tags{
+#sitenav, #contextnav, .post-tags{
     list-style-type:none;
     padding-bottom:0;
     padding-left:0;
@@ -176,7 +163,11 @@ hr {
     padding:3pt;
 }
 
-#post-tags li {
+#sitenav{
+    margin: 1em;
+}
+
+.post-tags li {
     display:inline;
     padding:1pt;
 }
