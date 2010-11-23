@@ -33,6 +33,7 @@ h1 {
     font-size:3em;
     line-height:1;
     text-align:center;
+    margin-top:1em;
 }
 
 h2, h3 {
@@ -164,7 +165,7 @@ hr {
 }
 
 #sitenav{
-    margin: 1em;
+    margin: 4em;
 }
 
 .post-tags li {
