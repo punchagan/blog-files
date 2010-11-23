@@ -1,10 +1,10 @@
-<div id="left-bar">
+<div class="left-bar">
   <span class="post-date">
   {{ page.created|date:"D d M Y"}}
   </span>
 </div>
 
-<div id="right-bar">
+<div class="right-bar">
   <ul id="post-tags">
     {%for tag in page.categories %}
     <li>{<a href="{{site.url}}/tag/{{tag}}.html">{{tag}}</a>}</li>
