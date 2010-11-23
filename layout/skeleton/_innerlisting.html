@@ -6,7 +6,6 @@
 <h2>{{node.name|unslugify}}</h2>
 {% if node.has_listing %}</a>{% endif %}
 {%endifnotequal%}
-<div class="feed"><a href="{{site.url}}/atom.xml"><img src="{{site.url}}/media/images/feed.jpg" alt="Subscribe" /></a></div>
 {%regroup node.pages by created|date:"Y" as pages_year %}
 {% for year in pages_year|slice:"-1" %}
 <div class="listing">
