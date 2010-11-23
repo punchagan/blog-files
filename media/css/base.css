@@ -210,11 +210,14 @@ hr {
     margin-left:1.5em;
 }
 
-.post-date {
+.left-bar {
     font-size:11pt;
     position:absolute;
     right:530px;
     text-align:right;
+}
+
+.post-date a, .comment-count a{
     color:#BBBBBB;
     padding-bottom:4.5pt;
     padding-left:9pt;
