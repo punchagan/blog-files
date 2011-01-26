@@ -187,6 +187,15 @@ hr {
     position:relative;
 }
 
+.outline-2 h2 a{
+    color:#444444;
+}
+
+.outline-2 h2 a:hover{
+    color:#444444;
+    border-bottom: none;
+}
+
 .outline-2 a {
     border-bottom-color:transparent;
     border-bottom-style:solid;
