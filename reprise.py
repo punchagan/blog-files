@@ -44,10 +44,9 @@ AUTHOR = {
         'github': 'http://github.com/punchagan',
     },
     'pages': {
-        'Blog': 'http://punchagan.muse-amuse.in/blog/',
-        'Home': 'http://punchagan.muse-amuse.in/',
-        'Link Archive': 'http://punchagan.muse-amuse.in/links.html',
-        'Quote Archive': 'http://punchagan.muse-amuse.in/quotes.html',
+        'Blog': 'http://punchagan.muse-amuse.in/',
+        'Bookmarks': 'http://punchagan.muse-amuse.in/links.html',
+        'Quotes': 'http://punchagan.muse-amuse.in/quotes.html',
     },
 }
 
@@ -146,7 +145,7 @@ def generate_index_static(entries, template):
                              'head_title': "%s: %s" % (CONTEXT['head_title'],
                                                        entry['title'])}))
         write_file(join(DIRS['build'], '%s.html' %
-                        entry['slug'].lstrip('static/')), html)
+                        entry['slug'][7:]), html)
 
 def generate_404(template):
         html = template.render(CONTEXT)
