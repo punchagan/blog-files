@@ -204,7 +204,7 @@ if __name__ == "__main__":
     templates = get_templates()
     env = Environment(loader=DictLoader(templates))
 
-    # shutil.copytree(DIRS['assets'], DIRS['build'])
+    shutil.copytree(DIRS['assets'], DIRS['build'])
     all_entries = {}
     for c in CATEGORIES:
         print "Parsing Entries in %s ..." % c
