@@ -1,15 +1,10 @@
 body {
 color: #444;
 font-size: 1em;
-font-family: 'DejaVu Sans', 'Bitstream Vera Sans', Verdana, sans-serif;
+font-family: 18px/25px 'Palatino', 'Palatino Linotype', 'Georgia', serif;
 line-height: 1.6;
 padding: 0 3em 0 13em;
 width: 40em;
-}
-
-@font-face {
-font-family: "Sorts Mill Goudy";
-src: url("/OFLGoudyStM.otf");
 }
 
 a {
@@ -21,7 +16,7 @@ margin-bottom: 1em;
 }
 
 ul, ol {
-padding: 0;
+padding: 0 0 0 -1em;
 }
 
 blockquote {
@@ -34,9 +29,8 @@ font-weight: bold;
 }
 
 pre, code {
-font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
-Consolas, Monaco, 'Lucida Console', monospaced;
-font-size: .75em;
+font-family: 'Consolas','Deja Vu Sans Mono','Bitstream Vera Sans Mono','Monaco','Courier New';
+font-size: .82em;
 }
 
 pre {
@@ -47,8 +41,8 @@ padding: 1em 1em 1em 2em;
 }
 
 h1 {
-font-size: 2.5em;
-margin: 3.5em 0 1em 0;
+font-size: 3.5em;
+margin: 0em;
 }
 
 h2 {
@@ -126,7 +120,7 @@ margin: 0 0 0 -6.25em;
 
 ul.tags {
 list-style-type: none;
-margin: 0 0 4em 3em;
+margin: 0 0 0 1em;
 }
 
 ul.tags li {
