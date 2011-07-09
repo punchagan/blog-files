@@ -1,3 +1,4 @@
+#!/usr/bin/emacs --script
 (add-to-list 'load-path "/home/punchagan/.emacs.d/elisp/org/lisp/")
 ;; Load up Org Mode and Babel
 (require 'org-install)
