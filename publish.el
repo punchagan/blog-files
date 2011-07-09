@@ -53,6 +53,6 @@
 
 (shell-command "rm -rf ~/blog-files/source/")
 (publish-blog)
-(shell-command "/home/punchagan/pub-site/bin/python $home/blog-files/reprise.py")
+(shell-command "/home/punchagan/pub-site/bin/python ~/blog-files/reprise.py")
 
 
