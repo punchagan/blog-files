@@ -196,8 +196,9 @@ def rfc3339(date):
 def get_templates():
     files = ['base.html', 'list.html', 'detail.html', '_entry.html',
              '404.html', 'static.html', STYLESHEET]
+    return dict([(f, open("%s/%s" %(DIRS['templates'], f)).read().strip())
+                 for f in files])
 
-    return {f:open("%s/%s" %(DIRS['templates'], f)).read().strip() for f in files}
 
 if __name__ == "__main__":
     templates = get_templates()
