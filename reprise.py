@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
 
+# The original code is available at https://github.com/uggedal/reprise
+
 from __future__ import with_statement
 
 import os
