@@ -1,0 +1,212 @@
+body {
+color: #444;
+font-size: 1em;
+font-family: 'DejaVu Sans', 'Bitstream Vera Sans', Verdana, sans-serif;
+line-height: 1.6;
+padding: 0 3em 0 13em;
+width: 40em;
+}
+
+@font-face {
+font-family: "Sorts Mill Goudy";
+src: url("/OFLGoudyStM.otf");
+}
+
+a {
+color: #444;
+}
+
+p {
+margin-bottom: 1em;
+}
+
+ul, ol {
+padding: 0;
+}
+
+blockquote {
+font-style: italic;
+margin: 0;
+}
+
+blockquote em {
+font-weight: bold;
+}
+
+pre, code {
+font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+Consolas, Monaco, 'Lucida Console', monospaced;
+font-size: .75em;
+}
+
+pre {
+border: 0.15em solid #eee;
+border-left: 1em solid #eee;
+display: block;
+padding: 1em 1em 1em 2em;
+}
+
+h1 {
+font-size: 2.5em;
+margin: 3.5em 0 1em 0;
+}
+
+h2 {
+font-size: 3em;
+margin-bottom: 0em;
+}
+
+h3 {
+font-size: 2em;
+}
+
+img {
+margin: 1em 0 1em 0;
+}
+
+table {
+margin-top: 1em;
+}
+
+table th, table td {
+padding-right: 1em;
+text-align: left;
+}
+
+table.hanging {
+display: inline;
+float: left;
+padding: 0;
+margin: 1em 1em 1em -10em;
+}
+
+table caption {
+caption-side: bottom;
+color: #666;
+font-size: .75em;
+padding: 0 1em;
+text-align: left;
+}
+
+table.hanging img {
+border: .1em solid #ddd;
+margin: 0;
+padding: .5em;
+}
+
+h1 a, h2 a, h3 a, ul.tags a {
+text-decoration: none;
+}
+
+h1, h1 a, h2, h2 a, h3 {
+color: #222;
+}
+
+h1 a:hover, h2 a:hover {
+color: #c00;
+}
+
+h1, h2, h3, abbr.updated {
+font-family: "Sorts Mill Goudy", Georgia, 'DejaVu Serif', 'Bitstream Vera Serif', serif;
+font-style: normal;
+font-weight: normal;
+}
+
+abbr.updated {
+float: left;
+}
+
+abbr.updated {
+border: 0;
+color: #c00;
+font-size: 1.6em;
+line-height: 3.25em;
+margin: 0 0 0 -6.25em;
+}
+
+ul.tags {
+list-style-type: none;
+margin: 0 0 4em 3em;
+}
+
+ul.tags li {
+display: inline;
+font-size: .8em;
+margin-right: .3em;
+}
+
+ul.tags li.active a, ul.tags a:hover {
+color: #c00;
+}
+
+.entry-content a {
+color: #c00;
+}
+
+.entry-content a:hover {
+color: #000;
+}
+
+p#footer {
+color: #bbb;
+font-size: .75em;
+margin-top: 3em;
+text-align: center;
+text-indent: 0;
+}
+
+p#footer a {
+color: #999;
+}
+
+#sitepages {
+margin: 1em;
+position: absolute;
+right: 1em;
+text-align: right;
+top: .5em;
+z-index: 9000;
+}
+
+#sitepages a {
+background: #222;
+border-radius:.3em;
+-moz-border-radius:.3em;
+-webkit-border-radius:.3em;
+color: #fff;
+display: inline;
+margin-bottom: .5em;
+opacity: .9;
+padding: .4em .6em;
+text-decoration: none;
+}
+
+#sitepages a:hover {
+opacity: .6;
+}
+
+#elsewhere {
+margin: 1em;
+position: absolute;
+right: 1em;
+text-align: right;
+top: 3em;
+z-index: 8000;
+}
+
+#elsewhere a {
+background: #c00;
+border-radius:.3em;
+-moz-border-radius:.3em;
+-webkit-border-radius:.3em;
+color: #fff;
+display: inline;
+margin-bottom: .5em;
+opacity: .9;
+padding: .4em .6em;
+text-decoration: none;
+}
+
+#elsewhere a:hover {
+opacity: .6;
+}

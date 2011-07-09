@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}
+<a href="/">{{ body_title }}</a>
+{% endblock %}
+{% block content %}
+{% set plain_title = True %}
+<div class="hentry">
+<h2>
+{{ entry.title }}
+</h2>
+<div class="entry-content">{{ entry.content_html }}</div>
+</div>
+{% endblock %}

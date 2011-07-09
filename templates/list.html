@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}
+{% if active_tag %}
+<a href="/">{{ body_title }}</a>
+{% else %}
+{{ body_title }}
+{% endif %}
+{% endblock %}
+{% block content %}
+{% for entry in entries %}
+{% if active_tag %}
+{% set display_content = True %}
+{% elif listing %}
+{% set display_content = True %}
+{% set plain_title = True %}
+{% else %}
+{% set display_content = loop.first %}
+{% endif %}
+{% include '_entry.html' %}
+{% endfor %}
+{% endblock %}

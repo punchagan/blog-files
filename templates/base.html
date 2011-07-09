@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>{{ head_title }}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel='stylesheet' type='text/css' href='/{{ stylesheet }}'>
+<link rel="alternate" type="application/atom+xml"
+title="{{ head_title }}" href="{{ feed_url }}">
+</head>
+<body>
+<p id="sitepages">
+{% for page, url in author.pages.items() %}
+<a href="{{ url }}">{{ page }}</a>
+{% endfor %}
+</p>
+<p id="elsewhere">
+{% for service, url in author.elsewhere.items() %}
+<a href="{{ url }}">{{ service }}</a>
+{% endfor %}
+</p>
+<h1>
+{% block title %}
+{% endblock %}
+</h1>
+{% block content %}
+{% endblock %}
+<p id="footer">
+<span class="author vcard">
+Written by
+<a class="url fn" href="{{ author.url }}">{{ author.name }}</a>
+&lt;<a class="email" href="mailto:{{ author.email }}">{{ author.email }}</a>&gt;.
+</span>
+Powered by
+<a href="http://github.com/uggedal/reprise">reprise.py</a>.
+</p>
+</body>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', '{{ analytics }}']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+</html>

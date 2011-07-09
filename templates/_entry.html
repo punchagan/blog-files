@@ -1,0 +1,22 @@
+<div class="hentry">
+<abbr class="updated" title="{{ entry.date.iso8601 }}">
+{{ entry.date.display }}
+</abbr>
+<h2>
+{% if plain_title %}
+{{ entry.title }}
+{% else %}
+<a href="/{{ entry.slug }}" rel="bookmark">{{ entry.title }}</a>
+{% endif %}
+</h2>
+<ul class="tags">
+{% for tag in entry.tags %}
+<li{% if active_tag == tag %} class="active"{% endif %}>
+<a href="/tags/{{ tag }}" rel="tag" >{{ tag }}</a>
+</li>
+{% endfor %}
+</ul>
+{% if display_content %}
+<div class="entry-content">{{ entry.content_html }}</div>
+{% endif %}
+</div>
