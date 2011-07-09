@@ -53,7 +53,7 @@ ROOT = abspath(dirname(__file__))
 DIRS = {
     'source': join(ROOT, 'source'),
     'build': join(ROOT, 'build'),
-    'public': '/var/www/punchagan.muse-amuse.in',
+    'public': join(ROOT, 'public'),
     'assets': join(ROOT, 'assets'),
     'templates': join(ROOT, 'templates'),    
 }
