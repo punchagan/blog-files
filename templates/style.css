@@ -1,10 +1,9 @@
 body {
-color: #444;
 font-size: 1em;
-font-family: 18px/25px 'Palatino', 'Palatino Linotype', 'Georgia', serif;
+font-family: 'Palatino', 'Palatino Linotype', 'Georgia', serif;
 line-height: 1.6;
-padding: 0 3em 0 13em;
-width: 40em;
+padding: 0 3em 0 15em;
+width: 45em;
 }
 
 @font-face {
