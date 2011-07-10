@@ -122,6 +122,8 @@ def generate_tag_indices(entries, template):
             dict(CONTEXT, **{'entries': tag_entries,
                              'active_tag': tag,
                              'feed_url': feed_url,
+                             'body_title': "%s - %s" % (CONTEXT['body_title'],
+                                                       tag),
                              'head_title': "%s: %s" % (CONTEXT['head_title'],
                                                        tag),}))
 
@@ -133,6 +135,9 @@ def generate_details(entries, template):
     for entry in entries:
         html = template.render(
             dict(CONTEXT, **{'entry': entry,
+                             'body_title': "%s - %s"
+                             % (CONTEXT['body_title'],
+                                entry['slug'].split('/')[0].capitalize()),
                              'head_title': "%s: %s" % (CONTEXT['head_title'],
                                                        entry['title'])}))
         write_file(join(DIRS['build'], '%s.html' % entry['slug']), html)
