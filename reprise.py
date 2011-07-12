@@ -113,7 +113,6 @@ def generate_index(entries, template, cat):
     write_file(join(DIRS['build'], '%s.atom' % cat), atom)
 
 def generate_tag_indices(entries, template):
-    entries = sum(entries.values(), [])
     entries = sorted(entries, key = lambda x: x['date']['iso8601'],
                      reverse = True)
     for tag in set(sum([e['tags'] for e in entries], [])):
@@ -230,7 +229,8 @@ if __name__ == "__main__":
         
     os.mkdir(join(DIRS['build'], 'tags'))
     print "Generating Tag indices..."
-    generate_tag_indices(all_entries, env.get_template('list.html'))
+    generate_tag_indices(sum(all_entries.values(), []),
+                         env.get_template('list.html'))
 
     generate_404(env.get_template('404.html'))
     generate_style(templates[STYLESHEET])
