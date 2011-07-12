@@ -134,15 +134,17 @@ def generate_tag_indices(entries, template):
 
 def generate_tag_cloud(entries, template):
     tags = sum([e['tags'] for e in entries], [])
-    tag_freq = [{'tag': tag, 'freq': tags.count(tag)} for tag in set(tags) if tags.count(tag) > 3]
+    tag_freq = [{'tag': tag, 'freq': tags.count(tag)} for tag in set(tags)
+                if tags.count(tag) > 3]
     maxFreq = max(t['freq'] for t in tag_freq)
     minFreq = min(t['freq'] for t in tag_freq)
     font_range = (80, 320)
     def normalize(val, min_f=minFreq, max_f=maxFreq, f_range=font_range):
         min_r, max_r = f_range
         return min_r + (val - min_f) * (max_r - min_r) / float (max_f - min_f)
-    tag_freq = [{'tag': t['tag'], 'size': normalize(t['freq']), 'freq': t['freq']} for t in tag_freq]
-    # tag_freq = sorted(tag_freq, key = lambda x: x['freq'], reverse=True)
+    tag_freq = [{'tag': t['tag'],
+                 'size': normalize(t['freq']),
+                 'freq': t['freq']} for t in tag_freq]
     html = template.render(
         dict(CONTEXT, **{'tag_freq': tag_freq, 
                          'head_title': "%s: %s" % (CONTEXT['head_title'],
