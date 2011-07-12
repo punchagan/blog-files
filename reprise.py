@@ -39,17 +39,17 @@ AUTHOR = {
     'name': 'punchagan',
     'email': 'punchagan [at] muse-amuse [dot] in',
     'url': 'http://punchagan.muse-amuse.in',
-    'elsewhere': {
-        '@punchagan': 'http://identi.ca/punchagan/',
-        'github': 'http://github.com/punchagan',
-    },
-    'pages': {
-        'Blog': 'http://punchagan.muse-amuse.in/',
-        'Bookmarks': 'http://punchagan.muse-amuse.in/links.html',
-        'Quotes': 'http://punchagan.muse-amuse.in/quotes.html',
-        'Tags': 'http://punchagan.muse-amuse.in/tags.html',
-        'Feeds': 'http://punchagan.muse-amuse.in/feeds.html',
-    },
+    'elsewhere': [
+        ('@punchagan', 'http://identi.ca/punchagan/'),
+        ('github', 'http://github.com/punchagan'),
+        ],
+    'pages': [
+        ('Blog', 'http://punchagan.muse-amuse.in/'),
+        ('Bookmarks', 'http://punchagan.muse-amuse.in/links.html'),
+        ('Quotes', 'http://punchagan.muse-amuse.in/quotes.html'),
+        ('Tags', 'http://punchagan.muse-amuse.in/tags.html'),
+        ('Feeds', 'http://punchagan.muse-amuse.in/feeds.html'),
+        ],
 }
 
 ROOT = abspath(dirname(__file__))

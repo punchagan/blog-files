@@ -10,12 +10,12 @@ title="{{ head_title }}" href="{{ feed_url }}">
 </head>
 <body>
 <p id="sitepages">
-{% for page, url in author.pages.items() %}
+{% for page, url in author.pages %}
 <a href="{{ url }}">{{ page }}</a>
 {% endfor %}
 </p>
 <p id="elsewhere">
-{% for service, url in author.elsewhere.items() %}
+{% for service, url in author.elsewhere %}
 <a href="{{ url }}">{{ service }}</a>
 {% endfor %}
 </p>
