@@ -118,15 +118,22 @@ abbr.updated {
     margin: 0 0 0 -6.25em;
 }
 
-ul.tags ul.cloud-tags {
+ul.cloud-tags {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    text-align: justify; 
 }
 
 ul.cloud-tags li {
     display: inline;
     margin-right: .3em;
+}
+
+ul.tags {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 ul.tags li {
