@@ -47,6 +47,7 @@ AUTHOR = {
         'Blog': 'http://punchagan.muse-amuse.in/',
         'Bookmarks': 'http://punchagan.muse-amuse.in/links.html',
         'Quotes': 'http://punchagan.muse-amuse.in/quotes.html',
+        'Feeds': 'http://punchagan.muse-amuse.in/feeds.html',        
     },
 }
 
