@@ -47,7 +47,8 @@ AUTHOR = {
         'Blog': 'http://punchagan.muse-amuse.in/',
         'Bookmarks': 'http://punchagan.muse-amuse.in/links.html',
         'Quotes': 'http://punchagan.muse-amuse.in/quotes.html',
-        'Feeds': 'http://punchagan.muse-amuse.in/feeds.html',        
+        'Tags': 'http://punchagan.muse-amuse.in/tags.html',
+        'Feeds': 'http://punchagan.muse-amuse.in/feeds.html',
     },
 }
 
@@ -131,6 +132,24 @@ def generate_tag_indices(entries, template):
         atom = generate_atom(tag_entries, feed_url)
         write_file(join(DIRS['build'], 'tags', '%s.atom' % tag), atom)
 
+def generate_tag_cloud(entries, template):
+    tags = sum([e['tags'] for e in entries], [])
+    tag_freq = [{'tag': tag, 'freq': tags.count(tag)} for tag in set(tags) if tags.count(tag) > 3]
+    maxFreq = max(t['freq'] for t in tag_freq)
+    minFreq = min(t['freq'] for t in tag_freq)
+    font_range = (80, 320)
+    def normalize(val, min_f=minFreq, max_f=maxFreq, f_range=font_range):
+        min_r, max_r = f_range
+        return min_r + (val - min_f) * (max_r - min_r) / float (max_f - min_f)
+    tag_freq = [{'tag': t['tag'], 'size': normalize(t['freq']), 'freq': t['freq']} for t in tag_freq]
+    # tag_freq = sorted(tag_freq, key = lambda x: x['freq'], reverse=True)
+    html = template.render(
+        dict(CONTEXT, **{'tag_freq': tag_freq, 
+                         'head_title': "%s: %s" % (CONTEXT['head_title'],
+                                                   'Tag Cloud')}))
+    write_file(join(DIRS['build'], 'tags.html'), html)
+
+
 def generate_details(entries, template):
     for entry in entries:
         html = template.render(
@@ -201,7 +220,7 @@ def rfc3339(date):
 
 def get_templates():
     files = ['base.html', 'list.html', 'detail.html', '_entry.html',
-             '404.html', 'static.html', STYLESHEET]
+             '404.html', 'static.html', 'cloud.html', STYLESHEET]
     return dict([(f, open("%s/%s" %(DIRS['templates'], f)).read().strip())
                  for f in files])
 
@@ -231,6 +250,9 @@ if __name__ == "__main__":
     print "Generating Tag indices..."
     generate_tag_indices(sum(all_entries.values(), []),
                          env.get_template('list.html'))
+
+    generate_tag_cloud(sum(all_entries.values(), []),
+                       env.get_template('cloud.html'))
 
     generate_404(env.get_template('404.html'))
     generate_style(templates[STYLESHEET])

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}
+<a href="/">{{ body_title }}</a>
+{% endblock %}
+{% block content %}
+{% set plain_title = True %}
+<div class="hentry">
+<h2>
+Tags
+</h2>
+<div class="entry-content">
+<ul class="cloud-tags">
+{% for tag in tag_freq %}
+<li>
+<a href="/tags/{{ tag.tag }}" rel="tag" style="font-size:{{ tag.size }}%">{{ tag.tag }}</a>
+</li>
+{% endfor %}
+</ul>
+</div>
+</div>
+{% endblock %}
