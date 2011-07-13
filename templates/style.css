@@ -130,6 +130,10 @@ ul.cloud-tags li {
     margin-right: 3pt;
 }
 
+ul.cloud-tags a {
+    text-decoration: none;
+}
+
 ul.tags {
     list-style-type: none;
     margin: 0;
