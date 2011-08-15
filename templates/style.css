@@ -225,3 +225,23 @@ p#footer a {
 sup {
     font-size: .5em;
 }
+
+#button {
+    position: relative;
+    text-align: left;
+}
+
+#button a {
+    background: none repeat scroll 0 0 #CC0000;
+    border-radius: 0.3em 0.3em 0.3em 0.3em;
+    color: #FFFFFF;
+    display: inline;
+    margin-bottom: 0.5em;
+    opacity: 0.9;
+    padding: 0.4em 0.6em;
+    text-decoration: none;
+}
+
+#button a:hover {
+    opacity: 0.6;
+}
