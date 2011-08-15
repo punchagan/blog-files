@@ -45,10 +45,11 @@ AUTHOR = {
         ],
     'pages': [
         ('Blog', 'http://punchagan.muse-amuse.in/'),
-        ('Bookmarks', 'http://punchagan.muse-amuse.in/links.html'),
-        ('Quotes', 'http://punchagan.muse-amuse.in/quotes.html'),
         ('Tags', 'http://punchagan.muse-amuse.in/tags.html'),
         ('Feeds', 'http://punchagan.muse-amuse.in/feeds.html'),
+        ('Projects', 'http://punchagan.muse-amuse.in/projects.html'),
+        ('Bookmarks', 'http://punchagan.muse-amuse.in/links.html'),
+        ('Quotes', 'http://punchagan.muse-amuse.in/quotes.html'),
         ],
 }
 
