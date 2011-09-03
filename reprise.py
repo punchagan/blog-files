@@ -40,8 +40,8 @@ AUTHOR = {
     'email': 'punchagan [at] muse-amuse [dot] in',
     'url': 'http://punchagan.muse-amuse.in',
     'elsewhere': [
-        ('@punchagan', 'http://identi.ca/punchagan/'),
-        ('github', 'http://github.com/punchagan'),
+        ('@punchagan', 'http://twitter.com/punchagan/'),
+        ('GitHub', 'https://github.com/punchagan'),
         ],
     'pages': [
         ('Blog', 'http://punchagan.muse-amuse.in/'),
