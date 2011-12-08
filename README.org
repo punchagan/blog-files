@@ -1,0 +1,56 @@
+#+TITLE: README
+
+* Description
+
+A simple system based on ideas and code from [[https://github.com/juanre/org-jekyll][org-jekyll]] and [[https://github.com/uggedal/reprise][reprise.py]]
+to publish a blog using simple static html pages.  Used for publishing
+my [[http://punchagan.muse-amuse.in][blog]]
+
+* Dependecies
+
+  - Python
+    + Jinja (for templating)
+    + Pygments (for code highlighting)
+  - Org-mode
+  - Some shell commands are run [need porting, if running on windows]
+  - Git (or other version control system) [optional]
+
+
+* Blog workflow
+
+  - Set the =org-publish-project-alist= similiar to the one used by
+    org-jekyll.  Look at =publish.el= for an example.
+  - Tag any sub-tree with a specific tag (I use =:ol:=) and attach a
+    timestamp to it (SCHEDULED, DEADLINE, or POST_DATE properties or a
+    an inactive time stamp in the entry) to tell org-reprise that this
+    subtree should be going "online".  The subtree can reside anywhere
+    in the project files.
+  - The property =WEB_CAT= can be used to define multiple categories
+    for blog entries.
+  - Run the =publish.el= script, when you want to publish.  I have all
+    my org-files in a git repo and a post hook runs =publish.el= on
+    every commit.
+
+* How it works
+
+  - Each subtree which needs to be published is exported to html and
+    saved to a temporary file, with additional metadata like tags,
+    post-data etc.
+  - These pages are then parsed, to publish a category page,
+    individual pages for items and atom feed pages.
+  - Each tag gets a separate listing page and a separate atom feed, as
+    well.  A tag cloud page is generated as well.
+  - Code blocks are pygmentized.
+  - There are two types of categories, which I use.  First, where each
+    item is a "post", which has a page of it's own, along with a
+    listing page for all the items in that category.  Other, where
+    there is only a listing page for the category and no individual
+    pages for each item.
+
+* Limitations
+
+  - No checks for updates are done.  Just republishes the whole blog.
+  - Images and media isn't being handled currently, since I don't post
+    media on my blog.
+  - It's not a purely Emacs based solution; depends on Python, Jinja,
+    Pygments, etc.
