@@ -16,8 +16,12 @@ my [[http://punchagan.muse-amuse.in][blog]]
   - Some shell commands are run [need porting, if running on windows]
   - Git (or other version control system) [optional]
 
+* Installation
 
-* Blog workflow
+  In Debian/Ubuntu:
+  : sudo apt-get install python-jinja2 python-pygments python-lxml
+
+* Usage
 
   - Set the =org-publish-project-alist= similiar to the one used by
     org-jekyll.  Look at =publish.el= for an example.
