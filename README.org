@@ -9,7 +9,7 @@ my [[http://punchagan.muse-amuse.in][blog]]
 * Dependecies
 
   - Python
-    + Jinja (for templating)
+    + Jinja2 (for templating)
     + Pygments (for code highlighting)
   - Org-mode
   - Some shell commands are run [need porting, if running on windows]
