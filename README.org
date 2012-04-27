@@ -55,3 +55,6 @@ my [[http://punchagan.muse-amuse.in][blog]]
     media on my blog.
   - It's not a purely Emacs based solution; depends on Python, Jinja,
     Pygments, etc.
+
+* License
+GNU General Public License 3.0
