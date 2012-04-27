@@ -11,6 +11,7 @@ my [[http://punchagan.muse-amuse.in][blog]]
   - Python
     + Jinja2 (for templating)
     + Pygments (for code highlighting)
+    + LXML
   - Org-mode
   - Some shell commands are run [need porting, if running on windows]
   - Git (or other version control system) [optional]
