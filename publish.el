@@ -1,5 +1,5 @@
 #!/usr/bin/emacs --script
-(add-to-list 'load-path "/home/punchagan/.emacs.d/elisp/org/lisp/")
+(add-to-list 'load-path "~/.emacs.d/elisp/org/lisp/")
 ;; Load up Org Mode and Babel
 (require 'org-install)
 
@@ -53,6 +53,6 @@
 
 (shell-command "rm -rf ~/blog-files/source/")
 (publish-blog)
-(shell-command "/home/punchagan/pub-site/bin/python ~/blog-files/reprise.py")
+(shell-command "~/pub-site/bin/python ~/blog-files/reprise.py")
 (shell-command "cp -a ~/blog-files/public/* /var/www/punchagan.muse-amuse.in")
 
