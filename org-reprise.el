@@ -22,6 +22,9 @@ languages to different directories.")
 (defvar org-reprise-new-buffers nil
   "Buffers created to visit org-publish project files looking for blog posts.")
 
+(defvar org-reprise-use-pygments t
+  "Use pygments to syntax highlight code blocks if non-nil.")
+
 (defun org-reprise-publish-dir (project &optional category)
   "Where does the project go, by default a :blog-publishing-directory 
    entry in the org-publish-project-alist."
@@ -135,7 +138,8 @@ languages to different directories.")
                  (org-end-of-subtree)
                  t 'string))
           (set-buffer org-buffer)
-          (setq html (org-reprise-convert-pre html))
+          (when org-reprise-use-pygments
+            (setq html (org-reprise-convert-pre html)))
           (delete-region (point-min) (point-max))
           (insert contents)
           (save-buffer))
