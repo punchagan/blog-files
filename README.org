@@ -25,6 +25,7 @@ my [[http://punchagan.muse-amuse.in][blog]]
 
   - Set the =org-publish-project-alist= similiar to the one used by
     org-jekyll.  Look at =publish.el= for an example.
+  - Edit =reprise.py= to your settings.
   - Tag any sub-tree with a specific tag (I use =:ol:=, meaning online) and
     attach a timestamp to it (SCHEDULED, DEADLINE, or POST_DATE properties or a
     an inactive time stamp in the entry) to tell org-reprise that this subtree
