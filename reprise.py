@@ -7,12 +7,11 @@ from __future__ import with_statement
 
 import os
 import re
-import time
 import email
 import shutil
 
-from os.path import abspath, realpath, dirname, join
-from datetime import datetime, timedelta
+from os.path import abspath, dirname, join
+from datetime import datetime
 from pygments.formatters import HtmlFormatter
 from jinja2 import DictLoader, Environment
 from lxml.builder import ElementMaker
