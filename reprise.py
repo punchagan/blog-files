@@ -10,7 +10,7 @@ import re
 import email
 import shutil
 
-from os.path import abspath, dirname, join
+from os.path import abspath, dirname, join, exists
 from datetime import datetime
 from pygments.formatters import HtmlFormatter
 from jinja2 import DictLoader, Environment
@@ -237,6 +237,10 @@ if __name__ == "__main__":
     env = Environment(loader=DictLoader(templates))
 
     shutil.copytree(DIRS['assets'], DIRS['build'])
+
+    if not exists(DIRS['public']):
+        os.makedirs(DIRS['public'])
+
     all_entries = {}
     for c in CATEGORIES:
         print "Parsing Entries in %s ..." % c
