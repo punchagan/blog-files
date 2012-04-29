@@ -32,7 +32,10 @@ my [[http://punchagan.muse-amuse.in][blog]]
     should be going "online". The subtree can reside anywhere in the project
     files.
   - The org-mode property =WEB_CAT= can be set on any heading to define
-    multiple categories for blog entries.
+    multiple categories for blog entries.  You can use any values for
+    the =WEB_CAT=, but each entry can have only one =WEB_CAT=.  These
+    values for the =WEB_CAT= should be appended to the =CATEGORIES=
+    dictionary in the =reprise.py= file.
   - Run the =publish.el= script, when you want to publish.  I have all
     my org-files in a git repo and a post hook runs =publish.el= on
     every commit.

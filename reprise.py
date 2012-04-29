@@ -23,6 +23,10 @@ STYLESHEET = 'style.css'
 PYG_CSS = 'emacs'
 NO_EXPORT_TAGS = ['ol', 'noexport']
 
+# Type 1 categories are written to the index.html file.  You can have
+# only one category of type-1.  Type 2 categories, are published to a
+# different category.html file where category is the name of the
+# category.
 CATEGORIES = {'blog': {
                'type': 1,
                'title': 'Blog'},
