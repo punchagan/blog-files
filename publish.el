@@ -1,5 +1,10 @@
 #!/usr/bin/emacs --script
-(add-to-list 'load-path "~/.emacs.d/elisp/org/lisp/")
+(setq home-dir "/home/punchagan/")
+
+(add-to-list 'load-path (expand-file-name
+                         ".emacs.d/elisp/org/lisp/"
+                         home-dir))
+
 ;; Load up Org Mode and Babel
 (require 'org-install)
 
@@ -14,9 +19,9 @@
  '((python . t)
    (emacs-lisp . t)
    ))
-  
+
 (require 'org-publish)
-  
+
 (setq org-publish-project-alist
       '(
 	("org-notes"
@@ -33,7 +38,7 @@
 	 :auto-preamble t
 	 :exclude-tags ("ol" "noexport")
 	 )
-	
+
 	("org-static"
 	 :base-directory "~/.life-in-plain-text/"
 	 :publishing-directory "~/blog-files/assets/media/"
@@ -41,9 +46,9 @@
 	 :recursive t
 	 :publishing-function org-publish-attachment
 	 )
-	
+
 	("org" :components ("org-notes" "org-static"))
-	
+
 	))
 
 
@@ -53,6 +58,9 @@
 
 (shell-command "rm -rf ~/blog-files/source/")
 (publish-blog)
-(shell-command "~/pub-site/bin/python ~/blog-files/reprise.py")
-(shell-command "cp -a ~/blog-files/public/* /var/www/punchagan.muse-amuse.in")
 
+(shell-command (expand-file-name
+                "pub-site/bin/python ~/blog-files/reprise.py"
+                home-dir))
+
+(shell-command "cp -a ~/blog-files/public/* /var/www/punchagan.muse-amuse.in")
