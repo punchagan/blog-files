@@ -8,16 +8,16 @@
 ;;; -------
 ;;;
 ;;; Extract subtrees from your org-publish project files that have a
-;;; WEB_CAT property with a timestapm and an :ol: tag, and export them
-;;; to a subdirectory source of your project's publishing directory.
-;;; Properties are passed over as (email) front-matter in the exported
-;;; files.  The title of the subtree is the title of the entry.
+;;; WEB_CAT property with a time-stamp and an :ol: tag, and export
+;;; them to a subdirectory source of your project's publishing
+;;; directory.  Properties are passed over as (email) front-matter in
+;;; the exported files.  The title of the subtree is the title of the
+;;; entry.
 
 (defvar org-reprise-category "WEB_CAT"
   "Specify a property which, if defined in the entry, is used as
 a category: the post is written to category/_posts. Ignored if
-nil. Use \"lang\" if you want to send posts in different
-languages to different directories.")
+nil.")
 
 (defvar org-reprise-new-buffers nil
   "Buffers created to visit org-publish project files looking for blog posts.")
