@@ -10,13 +10,8 @@ title="{{ head_title }}" href="{{ feed_url }}">
 </head>
 <body>
 <p id="sitepages">
-{% for page, url in author.pages %}
-<a href="{{ url }}">{{ page }}</a>
-{% endfor %}
-</p>
-<p id="elsewhere">
-{% for service, url in author.elsewhere %}
-<a href="{{ url }}">{{ service }}</a>
+{% for name, url in author.links %}
+<a href="{{ url }}"><img src='/{{ name }}.png' alt={{ name|title }}/></a>
 {% endfor %}
 </p>
 <h1>
@@ -34,6 +29,8 @@ Written by
 <a href="https://github.com/punchagan/blog-files">Source code</a>.
 <br />
 Content is under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/in">Creative Commons Attribution-NonCommercial-ShareAlike 2.5 India License</a>.
+<br />
+Icons from <a href="http://glyphicons.com/" targe="_blank">http://glyphicons.com/</a>
 </p>
 </body>
 <script type="text/javascript">

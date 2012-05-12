@@ -42,17 +42,15 @@ AUTHOR = {
     'name': 'punchagan',
     'email': 'punchagan [at] muse-amuse [dot] in',
     'url': 'http://punchagan.muse-amuse.in',
-    'elsewhere': [
-        ('@punchagan', 'http://twitter.com/punchagan/'),
-        ('GitHub', 'https://github.com/punchagan'),
-        ],
-    'pages': [
-        ('Blog', 'http://punchagan.muse-amuse.in/'),
-        ('Tags', 'http://punchagan.muse-amuse.in/tags.html'),
-        ('Feeds', 'http://punchagan.muse-amuse.in/feeds.html'),
-        ('Projects', 'http://punchagan.muse-amuse.in/projects.html'),
-        ('Bookmarks', 'http://punchagan.muse-amuse.in/links.html'),
-        ('Quotes', 'http://punchagan.muse-amuse.in/quotes.html'),
+    'links': [
+        ('blog', 'http://punchagan.muse-amuse.in/'),
+        ('bookmarks', 'http://punchagan.muse-amuse.in/links'),
+        ('quotes', 'http://punchagan.muse-amuse.in/quotes'),
+        ('tags', 'http://punchagan.muse-amuse.in/tags'),
+        ('feeds', 'http://punchagan.muse-amuse.in/feeds'),
+        ('github', 'https://github.com/punchagan'),
+        ('projects', 'http://punchagan.muse-amuse.in/projects'),
+        ('twitter', 'http://twitter.com/punchagan/'),
         ],
 }
 
