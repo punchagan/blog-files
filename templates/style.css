@@ -2,9 +2,10 @@ body {
     background-color: white;
     color: #222222;
     font: 16px/24px Palatino,'Palatino Linotype',Georgia,serif;
-    width: 45em;
-    padding: 0em 3em 0 15em;
-    line-height: 1.6;
+    width: 40em;
+    padding: 3em 3em 3em 3em;
+    line-height: 1.2;
+    font-size: 1.2em;
 }
 
 a {
@@ -41,12 +42,12 @@ pre {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     margin: 0em;
 }
 
 h2 {
-    font-size: 3em;
+    font-size: 1.8em;
     margin-bottom: 0em;
 }
 
@@ -107,22 +108,21 @@ h1, h2, h3, abbr.updated {
 }
 
 abbr.updated {
-    float: left;
+    position: absolute;
+    margin: -1.25em 0em 1em 0.2em;
 }
 
 abbr.updated {
     border: 0;
-    color: #c00;
-    font-size: 1.6em;
-    line-height: 3.25em;
-    margin: 0 0 0 -6.25em;
+    font-size: 0.7em;
+    opacity: 0.6;
 }
 
 ul.cloud-tags {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-align: justify; 
+    text-align: justify;
 }
 
 ul.cloud-tags li {
@@ -171,12 +171,6 @@ p#footer a {
 }
 
 #sitepages {
-    margin: 1em;
-    position: absolute;
-    right: 1em;
-    text-align: right;
-    top: .5em;
-    z-index: 9000;
 }
 
 #sitepages a {
@@ -197,29 +191,23 @@ p#footer a {
 }
 
 #elsewhere {
-    margin: 1em;
-    position: absolute;
-    right: 1em;
-    text-align: right;
-    top: 3em;
-    z-index: 8000;
+    text-align: left;
 }
 
 #elsewhere a {
-    background: #c00;
     border-radius:.3em;
     -moz-border-radius:.3em;
     -webkit-border-radius:.3em;
     color: #fff;
     display: inline;
     margin-bottom: .5em;
-    opacity: .9;
     padding: .4em .6em;
     text-decoration: none;
+    background: lavender;
 }
 
 #elsewhere a:hover {
-    opacity: .6;
+    opacity: .7;
 }
 
 sup {
