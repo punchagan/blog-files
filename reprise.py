@@ -73,18 +73,21 @@ CONTEXT = {
     'analytics': 'UA-21111013-1',
 }
 
-def read_and_parse_entries(cat):
+def read_and_parse_entries(category):
+    """ Given a category, returns all entries belonging to that category.
+
+    """
     entries = []
-    pwd = join(DIRS['source'], cat)
+    pwd = join(DIRS['source'], category)
     files = [join(pwd,f) for f in os.listdir(pwd) if f.endswith('.txt')]
     for file in files:
         with open(file, 'r') as open_file:
             msg = email.message_from_file(open_file)
             date = datetime(*map(int, msg['Created'].split(':')))
             entries.append({
-                'slug': "%s/%s" % (cat, slugify(msg['Title'].decode('utf-8'))),
+                'slug': "%s/%s" % (category, slugify(msg['Title'].decode('utf-8'))),
                 'title': msg['Title'].decode('utf-8'),
-                'tags': filter_tags(msg),
+                'tags': process_tags(msg),
                 'date': {'iso8601': date.isoformat(),
                          'rfc3339': rfc3339(date),
                          'display': date.strftime('%Y-%m-%d'),},
@@ -94,30 +97,42 @@ def read_and_parse_entries(cat):
                      reverse = True)
     return entries
 
-def filter_tags(msg):
+def process_tags(msg):
+    """ Processes the tags for the message.
+    
+    Filters out the tags listed in NO_EXPORT_TAGS, lower cases and sorts
+    other tags.
+    """
     if 'Tags' in msg.keys():
         tags = sorted(msg['Tags'].lower().split())
         tags = [t for t in tags if t not in NO_EXPORT_TAGS]
     return tags
            
-def generate_index(entries, template, cat):
-    index = cat if CATEGORIES[cat]['type'] == 2 else 'index'
-    feed_url = "%s/%s.atom" % (URL, cat)
-    body_title = "%s - %s" % (AUTHOR['title'], CATEGORIES[cat]['title'])
-    head_title = "%s - %s" % (AUTHOR['title'], CATEGORIES[cat]['title'])
+def generate_index(entries, template, category):
+    """ Generates a listing/index and an atom feed for given category.
+
+    """
+    # Page name is category.html for type-2 categories and index.html for type-1
+    index = category if CATEGORIES[category]['type'] == 2 else 'index'
+    feed_url = "%s/%s.atom" % (URL, category)
+    body_title = "%s - %s" % (AUTHOR['title'], CATEGORIES[category]['title'])
+    head_title = "%s - %s" % (AUTHOR['title'], CATEGORIES[category]['title'])
     html = template.render(dict(CONTEXT, **{'entries': entries,
                                             'feed_url': feed_url,
                                             'body_title': body_title,
                                             'head_title': head_title,
-                                            'listing': index is not 'index',
+                                            'listing': index != 'index',
                                             }))
     write_file(join(DIRS['build'],
-                    cat if CATEGORIES[cat]['type'] == 1 else '',
+                    category if CATEGORIES[category]['type'] == 1 else '',
                     '%s.html' % index), html)
     atom = generate_atom(entries, feed_url)
-    write_file(join(DIRS['build'], '%s.atom' % cat), atom)
+    write_file(join(DIRS['build'], '%s.atom' % category), atom)
 
 def generate_tag_indices(entries, template):
+    """ Generates an index page and feed page for each tag in entries.
+
+    """
     entries = sorted(entries, key = lambda x: x['date']['iso8601'],
                      reverse = True)
     for tag in set(sum([e['tags'] for e in entries], [])):
@@ -137,6 +152,9 @@ def generate_tag_indices(entries, template):
         write_file(join(DIRS['build'], 'tags', '%s.atom' % tag), atom)
 
 def generate_tag_cloud(entries, template):
+    """ Generates a html tag cloud.
+
+    """
     tags = sum([e['tags'] for e in entries], [])
     tag_freq = [{'tag': tag, 'freq': tags.count(tag)} for tag in set(tags)
                 if tags.count(tag) > 3]
