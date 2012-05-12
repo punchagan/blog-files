@@ -150,6 +150,10 @@ ul.tags li.active a, ul.tags a:hover {
     color: #c00;
 }
 
+.entry-content {
+    text-align: justify;
+}
+
 .entry-content a {
     color: #c00;
 }
