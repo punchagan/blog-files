@@ -11,7 +11,7 @@ title="{{ head_title }}" href="{{ feed_url }}">
 <body>
 <p id="sitepages">
 {% for name, url in author.links %}
-<a href="{{ url }}"><img src='/{{ name }}.png' alt={{ name|title }}/></a>
+<a href="{{ url }}"><img src='/{{ name }}.png' alt="{{ name|title }}" title="{{ name|title }}"/></a>
 {% endfor %}
 </p>
 <h1>
