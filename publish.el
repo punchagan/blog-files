@@ -54,7 +54,7 @@
 
 (defun publish-blog ()
   (interactive)
-  (org-reprise-export-blog "~/.life-in-plain-text/website/quotes.org"))
+  (org-reprise-export-blog "~/.life-in-plain-text/notes.org"))
 
 (shell-command "rm -rf ~/blog-files/source/")
 (publish-blog)
