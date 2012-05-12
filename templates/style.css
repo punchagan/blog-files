@@ -103,7 +103,6 @@ h1 a:hover, h2 a:hover {
 }
 
 h1, h2, h3, abbr.updated {
-    font-family: "Sorts Mill Goudy", Georgia, 'DejaVu Serif', 'Bitstream Vera Serif', serif;
     font-style: normal;
     font-weight: normal;
 }
