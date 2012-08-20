@@ -73,7 +73,7 @@ nil.")
             (setq code (match-string-no-properties 2))
             (if (save-match-data 
                   (string-match "example" (match-string-no-properties 1)))
-                (setq lang "html")
+                (setq lang "text")
               (setq lang (substring 
                           (match-string-no-properties 1) 16 -1))
               ;; handling emacs-lisp separately. pygments raises error when language 
