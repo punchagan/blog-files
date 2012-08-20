@@ -4,6 +4,10 @@
 (add-to-list 'load-path (expand-file-name
                          ".emacs.d/elisp/org/lisp/"
                          home-dir))
+;; Added for htmlize
+(add-to-list 'load-path (expand-file-name
+                         ".emacs.d/elisp/org/contrib/"
+                         home-dir))
 
 ;; Load up Org Mode and Babel
 (require 'org-install)
