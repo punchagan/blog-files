@@ -26,7 +26,7 @@ nil.")
   "Use pygments to syntax highlight code blocks if non-nil.")
 
 (defun org-reprise-publish-dir (project &optional category)
-  "Where does the project go, by default a :blog-publishing-directory 
+  "Where does the project go, by default a :blog-publishing-directory
    entry in the org-publish-project-alist."
   (let ((pdir (plist-get (cdr project) :blog-publishing-directory)))
     (unless pdir
@@ -67,16 +67,16 @@ nil.")
         (insert html)
         (goto-char (point-min))
         (save-match-data
-          (while (re-search-forward 
+          (while (re-search-forward
                   "<pre\\(.*?\\)>\\(\\(.\\|[[:space:]]\\|\\\n\\)*?\\)</pre.*?>"
                   nil t 1)
             (setq code (match-string-no-properties 2))
-            (if (save-match-data 
+            (if (save-match-data
                   (string-match "example" (match-string-no-properties 1)))
                 (setq lang "text")
-              (setq lang (substring 
+              (setq lang (substring
                           (match-string-no-properties 1) 16 -1))
-              ;; handling emacs-lisp separately. pygments raises error when language 
+              ;; handling emacs-lisp separately. pygments raises error when language
               ;; is unknown. list of languages variable should be added?
               (if (string= "emacs-lisp" lang)
                   (setq lang "common-lisp")))
@@ -88,9 +88,9 @@ nil.")
                 (setq code (replace-match "<" t t code)))
               (while (string-match "&amp;" code)
                 (setq code (replace-match "&" t t code))))
-            (replace-match 
+            (replace-match
              (shell-command-to-string
-              (format "echo -e %S | pygmentize -l %s -f html" code lang)) 
+              (format "echo -e %S | pygmentize -l %s -f html" code lang))
              nil t)))
         (setq html (buffer-substring-no-properties (point-min) (point-max))))))
   html)
@@ -110,13 +110,13 @@ nil.")
              (tags (mapconcat 'identity (org-get-tags-at (point) t) " "))
              (title (replace-regexp-in-string "[/]" "" heading))
              ;; Save the time used as POST_DATE. SCHEDULED etc may change.
-             (str-time 
-              (format-time-string "%Y:%m:%d:%T" 
+             (str-time
+              (format-time-string "%Y:%m:%d:%T"
                                   (if time
-                                      (apply 'encode-time 
+                                      (apply 'encode-time
                                              (org-parse-time-string time))
                                     (current-time)
-                                    (org-entry-put (point) 
+                                    (org-entry-put (point)
                                                    "POST_DATE" cur-time))))
              (to-file (format "%s.txt" title))
              (org-buffer (current-buffer))
@@ -132,7 +132,7 @@ nil.")
           ;; fails when the entry is not visible (ie, within a folded
           ;; entry).
           (dotimes (n level nil) (org-promote-subtree))
-          (setq html 
+          (setq html
                 (org-export-region-as-html
                  (1+ (and (org-back-to-heading) (line-end-position)))
                  (org-end-of-subtree)
@@ -145,10 +145,10 @@ nil.")
           (save-buffer))
         (widen)
         (with-temp-file (ensure-directories-exist
-                         (expand-file-name 
+                         (expand-file-name
                           to-file (org-reprise-publish-dir project category)))
           (when front-matter
-            (mapc (lambda (pair) 
+            (mapc (lambda (pair)
                     (insert (format "%s: %s\n" (car pair) (cdr pair))))
                   front-matter)
             (insert "\n\n"))
@@ -173,11 +173,11 @@ title. "
   (interactive)
   (save-excursion
     (setq org-reprise-new-buffers nil)
-    (let ((project (org-publish-get-project-from-filename 
+    (let ((project (org-publish-get-project-from-filename
                     (if filename
                         filename
                       (buffer-file-name)))))
-     (mapc 
+     (mapc
       (lambda (jfile)
         (if (string= (file-name-extension jfile) "org")
             (with-current-buffer (org-get-reprise-file-buffer jfile)

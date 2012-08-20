@@ -60,7 +60,7 @@ DIRS = {
     'build': join(ROOT, 'build'),
     'public': join(ROOT, 'public'),
     'assets': join(ROOT, 'assets'),
-    'templates': join(ROOT, 'templates'),    
+    'templates': join(ROOT, 'templates'),
 }
 
 CONTEXT = {
@@ -97,7 +97,7 @@ def read_and_parse_entries(category):
 
 def process_tags(msg):
     """ Processes the tags for the message.
-    
+
     Filters out the tags listed in NO_EXPORT_TAGS, lower cases and sorts
     other tags.
     """
@@ -105,7 +105,7 @@ def process_tags(msg):
         tags = sorted(msg['Tags'].lower().split())
         tags = [t for t in tags if t not in NO_EXPORT_TAGS]
     return tags
-           
+
 def generate_index(entries, template, category):
     """ Generates a listing/index and an atom feed for given category.
 
@@ -183,7 +183,7 @@ def generate_details(entries, template):
                              'head_title': "%s: %s" % (CONTEXT['head_title'],
                                                        entry['title'])}))
         write_file(join(DIRS['build'], '%s.html' % entry['slug']), html)
-                   
+
 
 def generate_index_static(entries, template):
     for entry in entries:
@@ -266,13 +266,13 @@ if __name__ == "__main__":
 
         if entries:
             generate_index(entries, env.get_template('list.html'), c)
-            print "Generated index for %s." % c            
+            print "Generated index for %s." % c
             print "Generating details for %s ..." % c
             generate_details(entries, env.get_template('detail.html'))
 
     entries = read_and_parse_entries('static')
     generate_index_static(entries, env.get_template('static.html'))
-        
+
     os.mkdir(join(DIRS['build'], 'tags'))
     print "Generating Tag indices..."
     generate_tag_indices(sum(all_entries.values(), []),
