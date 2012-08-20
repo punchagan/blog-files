@@ -9,13 +9,26 @@ import os
 import re
 import email
 import shutil
-
 from os.path import abspath, dirname, join, exists
 from datetime import datetime
 from pygments.formatters import HtmlFormatter
 from jinja2 import DictLoader, Environment
 from lxml.builder import ElementMaker
 from lxml.etree import tostring
+import logging
+
+# create logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+# create console handler and set level to debug
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.DEBUG)
+# create formatter
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+# add formatter to handler
+console_handler.setFormatter(formatter)
+# add handler to logger
+logger.addHandler(console_handler)
 
 URL = 'http://punchagan.muse-amuse.in'
 STYLESHEET = 'style.css'
@@ -276,22 +289,22 @@ def export_blog():
 
     all_entries = {}
     for c in CATEGORIES:
-        print "Parsing Entries in %s ..." % c
+        logger.info("Parsing Entries in %s ...", c)
         all_entries[c] = read_and_parse_entries(c)
         os.mkdir(join(DIRS['build'], c))
         entries = all_entries[c]
 
         if entries:
             generate_index(entries, env.get_template('list.html'), c)
-            print "Generated index for %s." % c
-            print "Generating details for %s ..." % c
+            logger.info("Generated index for %s.", c)
+            logger.info("Generating details for %s ..." %, c)
             generate_details(entries, env.get_template('detail.html'))
 
     entries = read_and_parse_entries('static')
     generate_index_static(entries, env.get_template('static.html'))
 
     os.mkdir(join(DIRS['build'], 'tags'))
-    print "Generating Tag indices..."
+    logger.info("Generating Tag indices...")
     generate_tag_indices(sum(all_entries.values(), []),
                          env.get_template('list.html'))
 
@@ -303,7 +316,7 @@ def export_blog():
 
     shutil.rmtree(DIRS['public'])
     shutil.move(DIRS['build'], DIRS['public'])
-    print "Published!"
+    logger.info("Published!")
 
 
 if __name__ == "__main__":
