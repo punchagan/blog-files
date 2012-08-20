@@ -71,6 +71,22 @@ CONTEXT = {
     'analytics': 'UA-21111013-1',
 }
 
+def open_and_parse_entry_file(path, category):
+    """ Open the file at given path, parse it an return a dict for the entry.
+    """
+    with open(path, 'r') as open_file:
+        msg = email.message_from_file(open_file)
+        date = datetime(*map(int, msg['Created'].split(':')))
+        return {
+            'slug': "%s/%s" % (category, slugify(msg['Title'].decode('utf-8'))),
+            'title': msg['Title'].decode('utf-8'),
+            'tags': process_tags(msg),
+            'date': {'iso8601': date.isoformat(),
+                        'rfc3339': rfc3339(date),
+                        'display': date.strftime('%Y-%m-%d'),},
+            'content_html': msg.get_payload().decode('utf-8')
+                }
+
 def read_and_parse_entries(category):
     """ Given a category, returns all entries belonging to that category.
 
@@ -78,19 +94,8 @@ def read_and_parse_entries(category):
     entries = []
     pwd = join(DIRS['source'], category)
     files = [join(pwd,f) for f in os.listdir(pwd) if f.endswith('.txt')]
-    for file in files:
-        with open(file, 'r') as open_file:
-            msg = email.message_from_file(open_file)
-            date = datetime(*map(int, msg['Created'].split(':')))
-            entries.append({
-                'slug': "%s/%s" % (category, slugify(msg['Title'].decode('utf-8'))),
-                'title': msg['Title'].decode('utf-8'),
-                'tags': process_tags(msg),
-                'date': {'iso8601': date.isoformat(),
-                         'rfc3339': rfc3339(date),
-                         'display': date.strftime('%Y-%m-%d'),},
-                'content_html': msg.get_payload().decode('utf-8')
-            })
+    for f in files:
+        entries.append(open_and_parse_entry_file(f, category))
     entries = sorted(entries, key = lambda x: x['date']['iso8601'],
                      reverse = True)
     return entries
@@ -173,7 +178,7 @@ def generate_tag_cloud(entries, template):
         write_file(join(DIRS['build'], 'tags.html'), html)
 
 
-def generate_details(entries, template):
+def generate_details(entries, template, write=True):
     for entry in entries:
         html = template.render(
             dict(CONTEXT, **{'entry': entry,
@@ -182,15 +187,17 @@ def generate_details(entries, template):
                                 entry['slug'].split('/')[0].capitalize()),
                              'head_title': "%s: %s" % (CONTEXT['head_title'],
                                                        entry['title'])}))
-        write_file(join(DIRS['build'], '%s.html' % entry['slug']), html)
-
+        if write:
+            write_file(join(DIRS['build'], '%s.html' % entry['slug']), html)
+        else:
+            print html
 
 def generate_index_static(entries, template):
     for entry in entries:
         html = template.render(
             dict(CONTEXT, **{'entry': entry,
-                             'head_title': "%s: %s" % (CONTEXT['head_title'],
-                                                       entry['title'])}))
+                            'head_title': "%s: %s" % (CONTEXT['head_title'],
+                                                        entry['title'])}))
         write_file(join(DIRS['build'], '%s.html' %
                         entry['slug'][7:]), html)
 
@@ -247,8 +254,18 @@ def get_templates():
     return dict([(f, open("%s/%s" %(DIRS['templates'], f)).read().strip())
                  for f in files])
 
+def export_file(path):
+    """ Exports the specified file to html
+    """
+    templates = get_templates()
+    env = Environment(loader=DictLoader(templates))
 
-if __name__ == "__main__":
+    entry = open_and_parse_entry_file(path, 'blog')
+    generate_details([entry], env.get_template('detail.html'), write=False)
+
+def export_blog():
+    """ Exports the whole blog.
+    """
     templates = get_templates()
     env = Environment(loader=DictLoader(templates))
 
@@ -287,3 +304,13 @@ if __name__ == "__main__":
     shutil.rmtree(DIRS['public'])
     shutil.move(DIRS['build'], DIRS['public'])
     print "Published!"
+
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) == 1:
+        export_blog()
+    elif len(sys.argv) == 2:
+        export_file(sys.argv[-1])
+    else:
+        print "Usage: %(cmd)s or %(cmd)s <file-path>" %{'cmd': sys.argv[0]}
