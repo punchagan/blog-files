@@ -6,7 +6,7 @@
                          home-dir))
 ;; Added for htmlize
 (add-to-list 'load-path (expand-file-name
-                         ".emacs.d/elisp/org/contrib/"
+                         ".emacs.d/elisp/org/contrib/lisp"
                          home-dir))
 
 ;; Load up Org Mode and Babel
