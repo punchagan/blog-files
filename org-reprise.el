@@ -88,10 +88,16 @@ nil.")
                 (setq code (replace-match "<" t t code)))
               (while (string-match "&amp;" code)
                 (setq code (replace-match "&" t t code))))
-            (replace-match
-             (shell-command-to-string
-              (format "echo -e %S | pygmentize -l %s -f html" code lang))
-             nil t)))
+
+            ;; Replace old code with processed code.
+            ;; point is left at the end of the replacement text
+            (replace-match code nil t)
+            ;; Run pygmentize on selected region
+            (shell-command-on-region (match-beginning 0) (point)
+                                     (format "pygmentize -l %s -f html" lang)
+                                     nil t)
+            ;; Go to the end of replacement
+            (goto-char (mark))))
         (setq html (buffer-substring-no-properties (point-min) (point-max))))))
   html)
 
