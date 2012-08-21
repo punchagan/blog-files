@@ -297,7 +297,7 @@ def export_blog():
         if entries:
             generate_index(entries, env.get_template('list.html'), c)
             logger.info("Generated index for %s.", c)
-            logger.info("Generating details for %s ..." %, c)
+            logger.info("Generating details for %s ...", c)
             generate_details(entries, env.get_template('detail.html'))
 
     entries = read_and_parse_entries('static')
