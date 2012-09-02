@@ -18,15 +18,14 @@ if len(sys.argv) == 2 and sys.argv[-1] == '--export-org':
 # If a 'source' dir is not present, export org to html
 if not exists(SRC_DIR):
     export = subprocess.Popen(['emacs', '--script', 'publish.el', HOME_DIR],
-                              cwd=ROOT,
-                              stdout=subprocess.STDOUT,
+                              cwd=ROOT, stdout=subprocess.PIPE,
                               stderr=subprocess.STDOUT)
 
     export.wait()
 
 # Run html to blog stuff
 publish = subprocess.Popen([sys.executable, 'reprise.py'], cwd=ROOT,
-                           stdout=subprocess.STDOUT, stderr=subprocess.STDOUT)
+                           stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
 publish.wait()
 
