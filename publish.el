@@ -1,5 +1,8 @@
 #!/usr/bin/emacs --script
-(setq home-dir "/home/punchagan/")
+
+;; Get the home-dir from argv and reset argv
+(setq home-dir (car argv))
+(setq argv nil)
 
 (add-to-list 'load-path (expand-file-name
                          ".emacs.d/elisp/org/lisp/"
@@ -60,11 +63,4 @@
   (interactive)
   (org-reprise-export-blog "~/.life-in-plain-text/notes.org"))
 
-(shell-command "rm -rf ~/blog-files/source/")
 (publish-blog)
-
-(shell-command (expand-file-name
-                "pub-site/bin/python ~/blog-files/reprise.py"
-                home-dir))
-
-(shell-command "cp -a ~/blog-files/public/* /var/www/punchagan.muse-amuse.in")
