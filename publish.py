@@ -19,10 +19,11 @@ if not exists(SRC_DIR):
     subprocess.Popen(['emacs', '--script', 'publish.el', HOME_DIR])
 
 # Run html to blog stuff
-subprocess.Popen(['python', 'reprise.py'])
+subprocess.Popen([sys.executable, 'reprise.py'])
 
 # Remove WEB_DIR
-shutil.rmtree(WEB_DIR)
+if exists(WEB_DIR):
+    shutil.rmtree(WEB_DIR)
 
 # Copy the newly generated stuff
-shutil.rmtree(PUB_DIR, WEB_DIR)
+shutil.copytree(PUB_DIR, WEB_DIR)
