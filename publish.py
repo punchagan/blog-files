@@ -25,7 +25,7 @@ if not exists(SRC_DIR):
     export.wait()
 
 # Run html to blog stuff
-publish = subprocess.Popen([sys.executable, REPRISE], cwd=ROOT,
+publish = subprocess.Popen([sys.executable, 'reprise.py'], cwd=ROOT,
                            stdout=subprocess.STDOUT, stderr=subprocess.STDOUT)
 
 publish.wait()
